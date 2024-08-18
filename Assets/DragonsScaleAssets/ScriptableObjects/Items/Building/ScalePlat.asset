@@ -9,9 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47eb50204bff19446b16938bb0fd93e5, type: 3}
-  m_Name: DragonTesting
+  m_Script: {fileID: 11500000, guid: b224b13f6adc4fd7a06a7fea2e4f9b26, type: 3}
+  m_Name: ScalePlat
   m_EditorClassIdentifier: 
-  type: 0
-  sleepTotalTime: 15
-  prefab: {fileID: 3783789720886338806, guid: c8f7215b75032e34ab89f9beca1c9143, type: 3}
+  baseId: Plat Scale
+  itemType: 5
+  displayName: 
+  baseMonetaryValue: 225
+  ingredientValue: 225

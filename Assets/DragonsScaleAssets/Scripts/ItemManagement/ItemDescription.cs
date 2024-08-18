@@ -15,13 +15,16 @@ public enum ItemType
     BattleAxe,
     Sword,
     Shield,
+    Scale,
+    Rock,
+    Stick
 }
 
 
 /**
  * An item in-game.
  */
-[Serializable]
+[Serializable,CreateAssetMenu]
 public class ItemDescription : ScriptableObject
 {
     /**

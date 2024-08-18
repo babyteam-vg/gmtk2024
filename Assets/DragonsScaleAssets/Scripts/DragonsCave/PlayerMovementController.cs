@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementController : MonoBehaviour
 {
@@ -15,6 +16,9 @@ public class PlayerMovementController : MonoBehaviour
     private bool isSoft;
     private float walkingTime;
     [SerializeField] private float timeToStepEvent;
+
+
+    private PicakbleObject objectToPick;
 
 
     private void Update()
@@ -53,7 +57,31 @@ public class PlayerMovementController : MonoBehaviour
             isWalking = false;
             walkingTime = 0f;
         }
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            if(objectToPick!= null) objectToPick.PickObject();
+        }
     }
     
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.transform.TryGetComponent(out PicakbleObject pickable))
+        {
+            objectToPick = pickable;
+        }
+
+        if (other.transform.tag == "Finish")
+        {
+            TransitionManager.Instance.LoadScene("Crafting",true);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.transform.TryGetComponent(out PicakbleObject pickable))
+        {
+            objectToPick = null;
+        }
+    }
     
 }

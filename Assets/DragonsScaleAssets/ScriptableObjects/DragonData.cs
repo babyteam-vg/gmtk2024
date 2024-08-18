@@ -15,7 +15,6 @@ public enum DragonType
     Plata,
     Oro,
     Pezcado
-
 }
 
 [CreateAssetMenu]
@@ -24,4 +23,5 @@ public class DragonData : ScriptableObject
     public DragonType type;
     public float sleepTotalTime;
     public DragonController prefab;
+    public ItemDescription item;
 }

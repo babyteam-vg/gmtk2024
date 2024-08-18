@@ -8,8 +8,12 @@ public class Item
     public readonly ItemDescription Description;
     private readonly IReadOnlyList<Item> _craftedWith;
 
-    public Item(ItemDescription description, IReadOnlyList<Item> craftedWith)
+    public Item(ItemDescription description, IReadOnlyList<Item> craftedWith = null)
     {
+        if (craftedWith == null)
+        {
+            craftedWith = new List<Item>();
+        }
         Description = description;
         _craftedWith = craftedWith;
     }
