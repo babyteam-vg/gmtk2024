@@ -11,21 +11,6 @@ public abstract class Item: ScriptableObject
 */
 
 [Serializable]
-public class Inventory
-{
-    // Set de Items
-
-    public void AddItem()
-    {
-    }
-
-    public bool SpendItem()
-    {
-        return false;
-    }
-}
-
-[Serializable]
 public class PlayerData
 {
 
