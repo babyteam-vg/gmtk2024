@@ -16,6 +16,7 @@ public class CaveSceneController : MonoBehaviour
 {
     [SerializeField] private List<PickableSpot> pickableSpots;
     [SerializeField] private Transform dragonPivot;
+    private DragonController dragonObj;
 
     public static CaveSceneController Instance { get; private set; }
     private void Awake() 
@@ -31,17 +32,27 @@ public class CaveSceneController : MonoBehaviour
     }
     void Start()
     {
+        SetDragon();
         SetPickables();
     }
-
-    public void DespawnDragon()
-    {
-        
-    }
+    
 
     public void SetPickables()
     {
         
+    }
+
+    public void SetDragon()
+    {
+        if (CaveManager.Instance.dragon.data.prefab != null)
+        {
+            dragonObj = Instantiate(CaveManager.Instance.dragon.data.prefab, dragonPivot);
+        }
+    }
+
+    public void DespawnDragon()
+    {
+        Destroy(dragonObj.gameObject);
     }
 
     public void AddPickable(PickableInstance pickable)

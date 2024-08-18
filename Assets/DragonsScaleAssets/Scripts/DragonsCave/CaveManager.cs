@@ -138,15 +138,16 @@ public class CaveManager : MonoBehaviour
     {
         dragon.data = dragonsDatasByLevel[GameManager.Instance.GetCurrentLevel()].GetDragon();
         dragon.currentTime = dragon.data.sleepTotalTime;
+        CaveSceneController.Instance.SetDragon();
+        
         //PlaySoundDragonEnter();
     }
 
     private void DespawnDragon()
     {
-        
         if (CaveSceneController.Instance != null)
         {
-            //CaveSceneController.Instance.DespawnDragon();
+            CaveSceneController.Instance.DespawnDragon();
             // Que te mate
         }
 
