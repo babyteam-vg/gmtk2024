@@ -35,37 +35,15 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement name="InventoryContainer" style="justify-content: center; align-items: flex-end; flex-grow: 1;">
-                <ui:VisualElement name="Inventory" style="flex-grow: 1; justify-content: flex-start; align-items: stretch; margin-left: 42px; margin-right: 42px; margin-top: 0; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.56); border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px; flex-wrap: nowrap; padding-top: 25px; padding-right: 36px; padding-left: 36px; align-self: auto; max-width: 716px;">
+            <ui:VisualElement name="InventoryContainer" style="justify-content: center; align-items: stretch; flex-grow: 1; flex-direction: row;">
+                <ui:VisualElement name="Inventory" style="margin-left: 42px; margin-right: 42px; margin-top: 0; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.56); border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px; flex-wrap: nowrap; padding-top: 25px; padding-right: 36px; padding-left: 36px; max-width: 716px; flex-grow: 1; flex-direction: column;">
                     <ui:VisualElement name="InventoryHeader" style="flex-grow: 0; flex-basis: 189px; flex-shrink: 0; align-items: stretch; align-self: auto; flex-direction: column; background-color: rgba(255, 255, 255, 0); padding-bottom: 19px;">
                         <ui:VisualElement name="InventoryIcon" style="flex-grow: 1; justify-content: flex-start; align-items: auto; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&amp;guid=6e7f1a4490e91264db39a45d716e6f68&amp;type=3#arrow-up@2x&quot;); -unity-background-scale-mode: scale-to-fit;" />
                         <ui:Label tabindex="-1" text="Inventory" parse-escape-sequences="true" display-tooltip-when-elided="true" name="InventoryTitle" class="title" style="font-size: 28px;" />
                     </ui:VisualElement>
                     <ui:ScrollView name="InventoryScroll" style="align-items: auto; justify-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-direction: column; align-self: auto;">
                         <ui:VisualElement name="InventoryContent" class="grid" style="flex-grow: 1; flex-direction: row;">
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
-                            <ui:VisualElement name="InventoryItem" />
+                            <DraggableObject focusable="true" />
                         </ui:VisualElement>
                     </ui:ScrollView>
                 </ui:VisualElement>

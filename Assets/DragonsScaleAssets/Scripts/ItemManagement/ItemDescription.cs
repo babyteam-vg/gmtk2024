@@ -74,9 +74,4 @@ public class ItemDescription : ScriptableObject
         return KnownItems.GetValueOrDefault(itemId);
     }
 
-
-    public override int GetHashCode()
-    {
-        return baseId == null ? 0 : baseId.GetHashCode();
-    }
 }
