@@ -1,0 +1,78 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/DragonsScaleAssets/UI/global.uss?fileID=7433441132597879392&amp;guid=2c1f872f5b01dac4c81b7eef34f0159d&amp;type=3#global" />
+    <Style src="project://database/Assets/DragonsScaleAssets/UI/crafting.uss?fileID=7433441132597879392&amp;guid=276a39004918379479020afe77661780&amp;type=3#crafting" />
+    <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row; background-image: resource(&apos;UI/GMTK_GamefCrafteo&apos;); -unity-background-scale-mode: flex-start; flex-wrap: nowrap;">
+        <ui:VisualElement name="LeftBar" class="scene-change-bar">
+            <ui:VisualElement name="Arrow" class="arrow" />
+        </ui:VisualElement>
+        <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; margin-top: 92px; margin-bottom: 92px;">
+            <ui:VisualElement name="CraftingContainer" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; flex-direction: column;">
+                <ui:VisualElement name="Crafting" style="flex-grow: 1; justify-content: space-between; align-items: center; margin-left: 42px; margin-right: 42px; margin-top: 0; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.56); border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px; flex-wrap: nowrap; padding-top: 25px; padding-right: 36px; padding-left: 36px; align-self: auto; padding-bottom: 25px; max-width: 857px;">
+                    <ui:VisualElement name="CraftingHeader" style="flex-grow: 0; flex-basis: 189px; flex-shrink: 0; align-items: center; align-self: auto; flex-direction: column; background-color: rgba(255, 255, 255, 0); padding-bottom: 19px; justify-content: center; max-width: 414px;">
+                        <ui:VisualElement name="ResultContainer" style="flex-grow: 1; justify-content: center; align-items: center; background-color: rgba(193, 193, 193, 0); -unity-background-image-tint-color: rgba(226, 226, 226, 0.63); align-self: auto; flex-shrink: 0; flex-direction: row;">
+                            <ui:VisualElement name="ResultSlot" class="crafting-slot item-slot" style="background-color: rgba(2, 2, 2, 0.7);" />
+                        </ui:VisualElement>
+                        <ui:Button text="Craft" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CraftingButton" style="justify-content: flex-start; align-self: stretch;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="CraftingZone" style="flex-grow: 1; align-items: center; justify-content: center;">
+                        <ui:VisualElement name="CraftingSlots" style="flex-grow: 0; flex-shrink: 0;">
+                            <ui:VisualElement name="CraftingT" class="crafting-row" style="flex-grow: 1;">
+                                <ui:VisualElement name="CraftingTL" class="crafting-slot item-slot" />
+                                <ui:VisualElement name="CraftingTM" class="crafting-slot item-slot" />
+                                <ui:VisualElement name="CraftingTR" class="crafting-slot item-slot" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="CraftingM" class="crafting-row" style="flex-grow: 1;">
+                                <ui:VisualElement name="CraftingML" class="crafting-slot item-slot" />
+                                <ui:VisualElement name="CraftingMM" class="crafting-slot item-slot" />
+                                <ui:VisualElement name="CraftingMR" class="crafting-slot item-slot" />
+                            </ui:VisualElement>
+                            <ui:VisualElement name="CraftingL" class="crafting-row" style="flex-grow: 1;">
+                                <ui:VisualElement name="CraftingBL" class="crafting-slot item-slot" />
+                                <ui:VisualElement name="CraftingBM" class="crafting-slot item-slot" />
+                                <ui:VisualElement name="CraftingBR" class="crafting-slot item-slot" />
+                            </ui:VisualElement>
+                        </ui:VisualElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <ui:VisualElement name="InventoryContainer" style="justify-content: center; align-items: flex-end; flex-grow: 1;">
+                <ui:VisualElement name="Inventory" style="flex-grow: 1; justify-content: flex-start; align-items: stretch; margin-left: 42px; margin-right: 42px; margin-top: 0; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.56); border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px; flex-wrap: nowrap; padding-top: 25px; padding-right: 36px; padding-left: 36px; align-self: auto; max-width: 716px;">
+                    <ui:VisualElement name="InventoryHeader" style="flex-grow: 0; flex-basis: 189px; flex-shrink: 0; align-items: stretch; align-self: auto; flex-direction: column; background-color: rgba(255, 255, 255, 0); padding-bottom: 19px;">
+                        <ui:VisualElement name="InventoryIcon" style="flex-grow: 1; justify-content: flex-start; align-items: auto; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=-4528830608231651361&amp;guid=6e7f1a4490e91264db39a45d716e6f68&amp;type=3#arrow-up@2x&quot;); -unity-background-scale-mode: scale-to-fit;" />
+                        <ui:Label tabindex="-1" text="Inventory" parse-escape-sequences="true" display-tooltip-when-elided="true" name="InventoryTitle" class="title" style="font-size: 28px;" />
+                    </ui:VisualElement>
+                    <ui:ScrollView name="InventoryScroll" style="align-items: auto; justify-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-direction: column; align-self: auto;">
+                        <ui:VisualElement name="InventoryContent" class="grid" style="flex-grow: 1; flex-direction: row;">
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                            <ui:VisualElement name="InventoryItem" />
+                        </ui:VisualElement>
+                    </ui:ScrollView>
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="RightBar" class="scene-change-bar">
+            <ui:VisualElement name="Arrow" class="arrow arrow-right" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
