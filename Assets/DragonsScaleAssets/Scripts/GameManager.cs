@@ -19,6 +19,7 @@ public class PlayerData
 }
 
 
+
 public class GameManager: MonoBehaviour
 {
 
@@ -35,7 +36,7 @@ public class GameManager: MonoBehaviour
         } 
         else 
         { 
-            DontDestroyOnLoad(this);
+            DontDestroyOnLoad(this.gameObject);
             Instance = this; 
         } 
     }
@@ -65,5 +66,30 @@ public class GameManager: MonoBehaviour
             playerData = new PlayerData();
             SaveData();
         }
+    }
+
+    public int GetCurrentLevel()
+    {
+        if (playerData.coins>= 100000)
+        {
+            return 4;
+        }
+        else if (playerData.coins>= 25000)
+        {
+            return 3;
+        }
+        else if (playerData.coins>= 5000)
+        {
+            return 2;
+        }
+        else if (playerData.coins>= 1000)
+        {
+            return 1;
+        }
+        else
+        {
+            return 0;
+        }
+        
     }
 }
