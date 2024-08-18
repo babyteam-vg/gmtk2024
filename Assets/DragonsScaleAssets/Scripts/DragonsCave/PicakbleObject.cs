@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AbstractResource : MonoBehaviour
+public class PicakbleObject : MonoBehaviour
 {
+    public int currentIndex;
+    [SerializeField] private Item itemValue;
+    
     // Start is called before the first frame update
     void Start()
     {
