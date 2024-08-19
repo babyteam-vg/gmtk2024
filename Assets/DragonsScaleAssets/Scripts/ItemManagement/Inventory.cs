@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 
@@ -124,6 +125,21 @@ public class Inventory
     public List<Item> ListItems()
     {
         return new List<Item>(_itemSlots.Keys);
+    }
+
+    /// <summary>
+    /// Lists all items in the inventory with their amounts.
+    /// </summary>
+    /// <returns>
+    /// All items in the inventory.
+    /// </returns>
+    public IEnumerable<ItemCount> ListItemsCount()
+    {
+        return _itemSlots.Select(item => new ItemCount
+        {
+            Item = item.Key,
+            Amount = item.Value
+        });
     }
 
     /// <summary>

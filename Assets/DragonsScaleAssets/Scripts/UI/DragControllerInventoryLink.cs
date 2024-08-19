@@ -30,7 +30,16 @@ public class DragControllerInventoryLink : MonoBehaviour
 
         Inventory inventory = GameManager.Instance.playerData.inventory;
 
+        LoadAllItems(inventory);
         inventory.ItemValueChanged += OnItemChanged;
+    }
+
+    private void LoadAllItems(Inventory inventory)
+    {
+        foreach (ItemCount item in inventory.ListItemsCount())
+        {
+            OnItemChanged(item);
+        }
     }
 
     private void Update()
