@@ -73,6 +73,7 @@ public class PlayerMovementController : MonoBehaviour
 
         if (other.transform.tag == "Finish")
         {
+            AudioManager.Instance.SetActivePlayerByIndex(1,true);
             TransitionManager.Instance.LoadScene("Crafting",true);
         }
     }

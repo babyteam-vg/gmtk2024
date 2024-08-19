@@ -55,7 +55,7 @@ public class CaveSceneController : MonoBehaviour
         Destroy(dragonObj.gameObject);
     }
 
-    public void AddPickable(PickableInstance pickable)
+    public void SpawnPickable(PickableInstance pickable)
     {
         List<PickableSpot> availableSpots = pickableSpots.FindAll((x) => x.pickable.pickablePrefab == null);
         PickableSpot spot = availableSpots[Random.Range(0, availableSpots.Count)];

@@ -35,9 +35,13 @@ public class TransitionManager : MonoBehaviour
         SceneManager.sceneLoaded -= OnLoadedScene;
     }
 
-    public void LoadScene(string sceneName, bool transition = false)
+    public void LoadScene(string sceneName, bool transition=false, Action initialCallback=null)
     {
-        Action callback = () => { SceneManager.LoadScene(sceneName);};
+        Action callback = () =>
+        {
+            SceneManager.LoadScene(sceneName);
+            initialCallback?.Invoke();
+        };
         if (transition)
         {
             StartCoroutine(Transition(1f, callback));
@@ -53,7 +57,7 @@ public class TransitionManager : MonoBehaviour
 
         while (time < duration)
         {
-            time += Time.deltaTime;
+            time += Time.unscaledDeltaTime;
             cortina.alpha = Mathf.Lerp(startAlpha, targetAlpha, time / duration);
             yield return null;
         }

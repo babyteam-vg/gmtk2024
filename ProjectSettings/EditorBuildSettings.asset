@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DragonsScaleAssets/Scenes/Cave.unity
     guid: 6be3521a488fddc4fb012437a48fa213
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects: {}

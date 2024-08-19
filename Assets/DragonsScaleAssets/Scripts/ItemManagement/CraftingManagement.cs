@@ -12,22 +12,33 @@ public class CraftingManagement : MonoBehaviour
 {
     private UIDocument _document;
 
-    [Header("Settings")] [CanBeNull] public CraftingRecipeRegistry recipeRegistry;
+    [Header("Settings")] 
+    [CanBeNull] public CraftingRecipeRegistry recipeRegistry;
     public string craftingButton = "CraftingButton";
+    Button _craftingButton;
 
-    [Header("Top Row")] [CanBeNull] public string slotTL = "CraftingTL";
+    [Header("Top Row")] 
+    [CanBeNull] public string slotTL = "CraftingTL";
     [CanBeNull] public string slotTC = "CraftingTC";
     [CanBeNull] public string slotTR = "CraftingTR";
 
-    [Header("Center Row")] [CanBeNull] public string slotML = "CraftingML";
+    [Header("Center Row")] 
+    [CanBeNull] public string slotML = "CraftingML";
     [CanBeNull] public string slotMC = "CraftingMC";
     [CanBeNull] public string slotMR = "CraftingMR";
 
-    [Header("Bottom Row")] [CanBeNull] public string slotBL = "CraftingBL";
+    [Header("Bottom Row")] 
+    [CanBeNull] public string slotBL = "CraftingBL";
     [CanBeNull] public string slotBC = "CraftingBC";
     [CanBeNull] public string slotBR = "CraftingBR";
+    
+    [Header("Scene Management")]
+    public string leftSceneButton = "LeftBar";
+    Button _leftSceneButton;
+    public string rightSceneButton = "RightBar";
+    Button _rightSceneButton;
 
-    Button _craftingButton;
+    
 
     private void Start()
     {
@@ -35,6 +46,10 @@ public class CraftingManagement : MonoBehaviour
 
         _craftingButton = _document.rootVisualElement.Q<Button>(craftingButton);
         _craftingButton.clicked += Craft;
+        _leftSceneButton = _document.rootVisualElement.Q<Button>(leftSceneButton);
+        _leftSceneButton.clicked += LoadLeftScene;
+        _rightSceneButton = _document.rootVisualElement.Q<Button>(rightSceneButton);
+        _rightSceneButton.clicked += LoadRightScene;
     }
 
     private void Craft()
@@ -91,5 +106,17 @@ public class CraftingManagement : MonoBehaviour
         ItemElement item = obj?.Q<ItemElement>();
 
         return item?.Item;
+    }
+
+    private void LoadLeftScene()
+    {
+        AudioManager.Instance.SetActivePlayerByIndex(0,true);
+        TransitionManager.Instance.LoadScene("Cave",true);
+    }
+
+    private void LoadRightScene()
+    {
+        AudioManager.Instance.SetActivePlayerByIndex(2,true);
+        TransitionManager.Instance.LoadScene("Shop",true);
     }
 }

@@ -3,9 +3,9 @@
     <Style src="project://database/Assets/DragonsScaleAssets/UI/crafting.uss?fileID=7433441132597879392&amp;guid=276a39004918379479020afe77661780&amp;type=3#crafting" />
     <Style src="project://database/Assets/DragonsScaleAssets/UI/Components/ItemElement.uss?fileID=7433441132597879392&amp;guid=40fbd8ffd3f6c6c48a35caa662772a9e&amp;type=3#ItemElement" />
     <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row; background-image: resource(&apos;UI/GMTK_GamefCrafteo&apos;); -unity-background-scale-mode: flex-start; flex-wrap: nowrap;">
-        <ui:VisualElement name="LeftBar" class="scene-change-bar">
-            <ui:VisualElement name="Arrow" class="arrow" />
-        </ui:VisualElement>
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="LeftBar" style="background-color: rgba(255, 179, 114, 0.5); justify-content: center; align-items: center; width: 23px;">
+            <ui:VisualElement name="Arrow" class="arrow" style="background-color: rgba(255, 255, 255, 0.58);" />
+        </ui:Button>
         <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; margin-top: 92px; margin-bottom: 92px;">
             <ui:VisualElement name="CraftingContainer" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; flex-direction: column;">
                 <ui:VisualElement name="Crafting" style="flex-grow: 1; justify-content: space-between; align-items: center; margin-left: 42px; margin-right: 42px; margin-top: 0; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.56); border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px; flex-wrap: nowrap; padding-top: 25px; padding-right: 36px; padding-left: 36px; align-self: auto; padding-bottom: 25px; max-width: 857px;">
@@ -66,8 +66,8 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement name="RightBar" class="scene-change-bar">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="RightBar" style="background-color: rgba(255, 190, 134, 0.5);">
             <ui:VisualElement name="Arrow" class="arrow arrow-right" />
-        </ui:VisualElement>
+        </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

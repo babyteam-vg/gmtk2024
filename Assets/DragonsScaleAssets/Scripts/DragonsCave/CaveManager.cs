@@ -95,9 +95,14 @@ public class CaveManager : MonoBehaviour
        else
        {
            currentTimeDragonSpawner -= Time.deltaTime;
+           
            if (currentTimeDragonSpawner <= 0)
            {
                SpawnRandomDragon();
+           }
+           else if (currentTimeDragonSpawner <= 10f)
+           {
+               if (CaveSceneController.Instance != null){} //CaveSceneController.Instance.DragonAlert(true);
            }
        }
 
@@ -121,10 +126,7 @@ public class CaveManager : MonoBehaviour
             currentIndex += 1;
             instance.index = currentIndex;
             pickableInstances.Add(instance);
-            if (CaveSceneController.Instance != null)
-            {
-                CaveSceneController.Instance.AddPickable(instance);
-            }
+            if (CaveSceneController.Instance != null) CaveSceneController.Instance.SpawnPickable(instance);
         }
     }
 
@@ -136,11 +138,17 @@ public class CaveManager : MonoBehaviour
     
     private void SpawnRandomDragon()
     {
+        
         dragon.data = dragonsDatasByLevel[GameManager.Instance.GetCurrentLevel()].GetDragon();
         dragon.currentTime = dragon.data.sleepTotalTime;
-        CaveSceneController.Instance.SetDragon();
+        //AudioManager.Instance.PlaySFX(DragonEnter);
+        //CaveSceneController.Instance.DragonAlert(false);
         
-        //PlaySoundDragonEnter();
+        if (CaveSceneController.Instance != null)
+        {
+            CaveSceneController.Instance.SetDragon();
+            PlayerDiesByDragon();
+        }
     }
 
     private void DespawnDragon()
@@ -148,11 +156,16 @@ public class CaveManager : MonoBehaviour
         if (CaveSceneController.Instance != null)
         {
             CaveSceneController.Instance.DespawnDragon();
-            // Que te mate
+            PlayerDiesByDragon();
         }
 
         dragon.data = null;
-        //PlaySoundDragonExit();
         currentTimeDragonSpawner = Random.Range(timeToSpawnDragon - margenTimeToSpawnDragon, timeToSpawnDragon + margenTimeToSpawnDragon);
+        //AudioManager.Instance.PlaySFX(DragonExit);
+    }
+
+    public void PlayerDiesByDragon()
+    {
+        
     }
 }
