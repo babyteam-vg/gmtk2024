@@ -91,4 +91,9 @@ public class DragTarget: VisualElement
         _holdObject = null;
         previewImage.style.backgroundImage = null;
     }
+
+    public DraggableObject GetHoldDraggable()
+    {
+        return _holdObject;
+    }
 }

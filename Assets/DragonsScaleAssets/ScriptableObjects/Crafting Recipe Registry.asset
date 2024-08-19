@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b224b13f6adc4fd7a06a7fea2e4f9b26, type: 3}
-  m_Name: ScalePlat
+  m_Script: {fileID: 11500000, guid: 7735506e2b4d4cc681ea3b4f4411ab77, type: 3}
+  m_Name: Crafting Recipe Registry
   m_EditorClassIdentifier: 
-  baseId: Plat Scale
-  itemType: 5
-  displayName: 
-  baseMonetaryValue: 225
-  ingredientValue: 225
+  recipes:
+  - {fileID: 11400000, guid: ec7ac3f3dedd12d47823399d4b9ba1ec, type: 2}

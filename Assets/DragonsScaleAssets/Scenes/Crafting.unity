@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 649912538}
   - component: {fileID: 649912540}
   - component: {fileID: 649912541}
+  - component: {fileID: 649912542}
   m_Layer: 5
   m_Name: CraftingUI
   m_TagString: Untagged
@@ -311,6 +312,29 @@ MonoBehaviour:
   containerId: InventoryContent
   itemTemplate: {fileID: 9197481963319205126, guid: b6c5f85fcb7baf74f9e262adbd5795c5, type: 3}
   dragTargetTag: item
+--- !u!114 &649912542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649912537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9a4ed8135f14b7ab6fc9d58f6aed55f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  recipeRegistry: {fileID: 11400000, guid: a86733749ec708846aa2831a4325d59f, type: 2}
+  craftingButton: CraftingButton
+  slotTL: CraftingTL
+  slotTC: CraftingTC
+  slotTR: CraftingTR
+  slotML: CraftingML
+  slotMC: CraftingMC
+  slotMR: CraftingMR
+  slotBL: CraftingBL
+  slotBC: CraftingBC
+  slotBR: CraftingBR
 --- !u!1 &2021784430
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseId: FIsh Scale
   itemType: 5
-  displayName: 
+  displayName: Fish Scale
   baseMonetaryValue: 1
   ingredientValue: 1
   Image: {fileID: 0}

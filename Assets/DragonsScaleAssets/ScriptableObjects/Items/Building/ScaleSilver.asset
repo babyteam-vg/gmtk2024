@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b224b13f6adc4fd7a06a7fea2e4f9b26, type: 3}
-  m_Name: ScaleRed
+  m_Name: ScaleSilver
   m_EditorClassIdentifier: 
-  baseId: Red Scale
+  baseId: Silver Scale
   itemType: 5
-  displayName: Red Scale
-  baseMonetaryValue: 5
-  ingredientValue: 5
-  Image: {fileID: 2800000, guid: e2cf7b26c6c187544ad98ec7640ea66e, type: 3}
+  displayName: Silver Scale
+  baseMonetaryValue: 225
+  ingredientValue: 225
+  Image: {fileID: 0}

@@ -1,6 +1,4 @@
-﻿using JetBrains.Annotations;
-using Unity.VisualScripting;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UIElements;
 
 public class ItemElement : VisualElement
@@ -9,10 +7,11 @@ public class ItemElement : VisualElement
     {
     }
 
+    public Item Item { get; private set; }
+
     private VisualElement Image => this.Q<VisualElement>("image");
     private Label QuantityBadge => this.Q<Label>("quantity");
     private Label DisplayNameBadge => this.Q<Label>("displayName");
-    private static Color ItemColor => Color.white;
 
     public void Init(
         Item item,
@@ -27,6 +26,8 @@ public class ItemElement : VisualElement
 
         DisplayNameBadge.text = item.Description.displayName;
         QuantityBadge.text = quantity.ToString();
+
+        Item = item;
     }
 
     public ItemElement() {}

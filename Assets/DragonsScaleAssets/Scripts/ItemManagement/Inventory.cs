@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 
 public struct ItemCount
@@ -74,12 +75,31 @@ public class Inventory
 
         _itemSlots[item] -= amount;
 
-        if (_itemSlots[item] > 0) return true;
+        if (_itemSlots[item] <= 0)
+        {
+            _itemSlots.Remove(item);
+        }
 
-        _itemSlots.Remove(item);
         EmitItemChange(item);
 
         return true;
+    }
+
+    /// <summary>
+    /// Checks if an item is in the inventory.
+    /// </summary>
+    /// <param name="item">
+    /// The item to check.
+    /// </param>
+    /// <param name="minAmount">
+    /// The minimum amount of the item to check for.
+    /// </param>
+    /// <returns>
+    /// True if the item is in the inventory.
+    /// </returns>
+    private bool HasItem(Item item, int minAmount = 1)
+    {
+        return _itemSlots.GetValueOrDefault(item, 0) >= minAmount;
     }
 
     /// <summary>
@@ -114,11 +134,54 @@ public class Inventory
     /// </param>
     private void EmitItemChange(Item item)
     {
+        int amount = _itemSlots.GetValueOrDefault(item, 0);
         ItemCount count = new()
         {
             Item = item,
-            Amount = _itemSlots[item]
+            Amount = amount
         };
         ItemValueChanged?.Invoke(count);
+    }
+
+    /// <summary>
+    /// If all of the ingredients are present in the inventory, they will be removed and  the result item will
+    /// be added to the inventory.
+    ///
+    /// Warning: Do not attempt to transmuate humans.
+    /// </summary>
+    /// <param name="ingredients">
+    /// The ingredients to transmute.
+    /// </param>
+    /// <param name="result">
+    /// The result of the transmutation.
+    /// </param>
+    /// <returns></returns>
+    public bool Transmutate(
+        List<Item> ingredients,
+        Item result
+    )
+    {
+        Dictionary<Item, int> ingredientsCount = new();
+        foreach (Item item in ingredients)
+        {
+            ingredientsCount.TryAdd(item, 0);
+            ingredientsCount[item] += 1;
+        }
+
+        foreach (Item item in ingredientsCount.Keys)
+        {
+            if (!HasItem(item, ingredientsCount[item]))
+            {
+                return false;
+            }
+        }
+
+        foreach (Item item in ingredientsCount.Keys)
+        {
+            SpendItem(item, ingredientsCount[item]);
+        }
+
+        AddItem(result);
+        return true;
     }
 }
