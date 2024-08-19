@@ -99,4 +99,11 @@ public class DragControllerInventoryLink : MonoBehaviour
 
         container.Add(draggableObject);
     }
+
+    private void OnDestroy()
+    {
+        Inventory inventory = GameManager.Instance.playerData.inventory;
+
+        inventory.ItemValueChanged -= OnItemChanged;
+    }
 }
