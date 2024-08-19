@@ -34,6 +34,7 @@ public class Inventory
         {
             _itemSlots[item] += amount;
         }
+        EmitItemChange(item);
     }
 
     /// <summary>
@@ -50,7 +51,7 @@ public class Inventory
     /// <summary>
     /// Takes an item from the inventory if there is enough.
     /// </summary>
-    /// <param name="itemDescription">
+    /// <param name="item">
     /// The item to take.
     /// </param>
     /// <param name="amount">
@@ -59,9 +60,9 @@ public class Inventory
     /// <returns>
     /// True if the item was taken.
     /// </returns>
-    public bool SpendItem(Item itemDescription, int amount = 1)
+    public bool SpendItem(Item item, int amount = 1)
     {
-        if (!_itemSlots.TryGetValue(itemDescription, out int slot))
+        if (!_itemSlots.TryGetValue(item, out int slot))
         {
             return false;
         }
@@ -71,26 +72,46 @@ public class Inventory
             return false;
         }
 
-        _itemSlots[itemDescription] -= amount;
+        _itemSlots[item] -= amount;
 
-        if (_itemSlots[itemDescription] <= 0)
-        {
-            _itemSlots.Remove(itemDescription);
-        }
+        if (_itemSlots[item] > 0) return true;
+
+        _itemSlots.Remove(item);
+        EmitItemChange(item);
 
         return true;
     }
 
+    /// <summary>
+    /// Clears the inventory.
+    /// </summary>
     public void Clear()
     {
+        foreach (Item item in ListItems())
+        {
+            _itemSlots[item] = 0;
+            EmitItemChange(item);
+        }
         _itemSlots.Clear();
     }
 
+    /// <summary>
+    /// Lists all items in the inventory.
+    /// </summary>
+    /// <returns>
+    /// All items in the inventory.
+    /// </returns>
     public List<Item> ListItems()
     {
         return new List<Item>(_itemSlots.Keys);
     }
 
+    /// <summary>
+    /// Emits a change in the amount of an item in the inventory.
+    /// </summary>
+    /// <param name="item">
+    /// The item to change.
+    /// </param>
     private void EmitItemChange(Item item)
     {
         ItemCount count = new()

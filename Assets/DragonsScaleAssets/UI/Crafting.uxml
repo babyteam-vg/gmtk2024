@@ -1,6 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/DragonsScaleAssets/UI/global.uss?fileID=7433441132597879392&amp;guid=2c1f872f5b01dac4c81b7eef34f0159d&amp;type=3#global" />
     <Style src="project://database/Assets/DragonsScaleAssets/UI/crafting.uss?fileID=7433441132597879392&amp;guid=276a39004918379479020afe77661780&amp;type=3#crafting" />
+    <Style src="project://database/Assets/DragonsScaleAssets/UI/Components/ItemElement.uss?fileID=7433441132597879392&amp;guid=40fbd8ffd3f6c6c48a35caa662772a9e&amp;type=3#ItemElement" />
     <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row; background-image: resource(&apos;UI/GMTK_GamefCrafteo&apos;); -unity-background-scale-mode: flex-start; flex-wrap: nowrap;">
         <ui:VisualElement name="LeftBar" class="scene-change-bar">
             <ui:VisualElement name="Arrow" class="arrow" />
@@ -17,19 +18,37 @@
                     <ui:VisualElement name="CraftingZone" style="flex-grow: 1; align-items: center; justify-content: center;">
                         <ui:VisualElement name="CraftingSlots" style="flex-grow: 0; flex-shrink: 0;">
                             <ui:VisualElement name="CraftingT" class="crafting-row" style="flex-grow: 1;">
-                                <ui:VisualElement name="CraftingTL" class="crafting-slot item-slot" />
-                                <ui:VisualElement name="CraftingTM" class="crafting-slot item-slot" />
-                                <ui:VisualElement name="CraftingTR" class="crafting-slot item-slot" />
+                                <DragTarget name="CraftingTL" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
+                                <DragTarget name="CraftingTC" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
+                                <DragTarget name="CraftingTR" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
                             </ui:VisualElement>
                             <ui:VisualElement name="CraftingM" class="crafting-row" style="flex-grow: 1;">
-                                <ui:VisualElement name="CraftingML" class="crafting-slot item-slot" />
-                                <ui:VisualElement name="CraftingMM" class="crafting-slot item-slot" />
-                                <ui:VisualElement name="CraftingMR" class="crafting-slot item-slot" />
+                                <DragTarget name="CraftingML" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
+                                <DragTarget name="CraftingMC" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
+                                <DragTarget name="CraftingMR" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
                             </ui:VisualElement>
                             <ui:VisualElement name="CraftingL" class="crafting-row" style="flex-grow: 1;">
-                                <ui:VisualElement name="CraftingBL" class="crafting-slot item-slot" />
-                                <ui:VisualElement name="CraftingBM" class="crafting-slot item-slot" />
-                                <ui:VisualElement name="CraftingBR" class="crafting-slot item-slot" />
+                                <DragTarget name="CraftingBL" focusable="false" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
+                                <DragTarget name="CraftingBC" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
+                                <DragTarget name="CraftingBR" target-tag="item" class="crafting-slot item-slot">
+                                    <ui:VisualElement name="image" style="flex-grow: 1;" />
+                                </DragTarget>
                             </ui:VisualElement>
                         </ui:VisualElement>
                     </ui:VisualElement>
@@ -42,9 +61,7 @@
                         <ui:Label tabindex="-1" text="Inventory" parse-escape-sequences="true" display-tooltip-when-elided="true" name="InventoryTitle" class="title" style="font-size: 28px;" />
                     </ui:VisualElement>
                     <ui:ScrollView name="InventoryScroll" style="align-items: auto; justify-content: flex-start; flex-grow: 0; flex-shrink: 1; flex-direction: column; align-self: auto;">
-                        <ui:VisualElement name="InventoryContent" class="grid" style="flex-grow: 1; flex-direction: row;">
-                            <DraggableObject focusable="true" />
-                        </ui:VisualElement>
+                        <ui:VisualElement name="InventoryContent" class="grid" style="flex-grow: 1; flex-direction: row;" />
                     </ui:ScrollView>
                 </ui:VisualElement>
             </ui:VisualElement>

@@ -17,3 +17,4 @@ MonoBehaviour:
   displayName: 
   baseMonetaryValue: 1
   ingredientValue: 1
+  Image: {fileID: 0}

@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 402203873}
   - component: {fileID: 402203872}
   - component: {fileID: 402203871}
+  - component: {fileID: 402203874}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -214,6 +215,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &402203874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 402203870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 193bdcc3082d53c469b21439414a5cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData:
+    coins: 3
 --- !u!1 &649912537
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,6 +240,7 @@ GameObject:
   - component: {fileID: 649912539}
   - component: {fileID: 649912538}
   - component: {fileID: 649912540}
+  - component: {fileID: 649912541}
   m_Layer: 5
   m_Name: CraftingUI
   m_TagString: Untagged
@@ -275,17 +291,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72c0c0c4b4f24a42bc4143dc1a79ba7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CursorSize: 92
-  targetIds:
-  - CraftTL
-  - CraftTC
-  - CraftTR
-  - CraftML
-  - CraftMC
-  - CraftMR
-  - CraftBL
-  - CraftBC
-  - CraftBR
+  cursorSize: 136
+  cursorOffset: {x: 1, y: 0}
+  document: {fileID: 0}
+--- !u!114 &649912541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649912537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa8d38f6f32a409db765bc9744a1359b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debugItem: {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
+  debugItem2: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+  containerId: InventoryContent
+  itemTemplate: {fileID: 9197481963319205126, guid: b6c5f85fcb7baf74f9e262adbd5795c5, type: 3}
+  dragTargetTag: item
 --- !u!1 &2021784430
 GameObject:
   m_ObjectHideFlags: 0

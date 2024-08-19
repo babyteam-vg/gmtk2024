@@ -57,8 +57,14 @@ public class ItemDescription : ScriptableObject
      */
     public static Dictionary<string, ItemDescription> KnownItems = new();
 
+    /// <summary>
+    /// The image of the item
+    /// </summary>
+    public Texture2D Image;
+    
+    private string storedId;
 
-    public ItemDescription()
+    public void Start()
     {
         if (baseId == "")
         {
@@ -67,8 +73,14 @@ public class ItemDescription : ScriptableObject
 
         if (!KnownItems.ContainsKey(baseId))
         {
-            KnownItems.Add(baseId, this);      
+            storedId = baseId;
+            KnownItems.Add(storedId, this);      
         }
+    }
+
+    private void OnDestroy()
+    {
+        KnownItems.Remove(storedId);
     }
 
     [CanBeNull]

@@ -13,12 +13,8 @@ public class Item
 
     public Item(ItemDescription description, IReadOnlyList<Item> craftedWith = null)
     {
-        if (craftedWith == null)
-        {
-            craftedWith = new List<Item>();
-        }
+        _craftedWith = craftedWith ?? new List<Item>();
         Description = description;
-        _craftedWith = craftedWith;
     }
 
     /// The value this item is sold for.
@@ -34,10 +30,21 @@ public class Item
     /// </returns>
     public override int GetHashCode()
     { 
+        if (_craftedWith == null)
+        {
+            return Description.baseId.GetHashCode();
+        }
         string hashString = _craftedWith
-            .OrderBy(item => item.Description.baseId).ToList()
-            .Aggregate(Description.baseId, (current, item) => current + (";" + item.Description.baseId));
+            .OrderBy(item => item.Description.baseId)
+            .Aggregate(Description.baseId, (current, item) => current + ";" + item.Description.baseId);
 
         return hashString.GetHashCode();
+    }
+
+    public override bool Equals(object obj)
+    {
+        if (obj is not Item) return false;
+
+        return GetHashCode() == obj.GetHashCode();
     }
 }

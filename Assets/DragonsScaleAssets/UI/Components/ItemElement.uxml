@@ -1,0 +1,10 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/DragonsScaleAssets/UI/Components/ItemElement.uss?fileID=7433441132597879392&amp;guid=40fbd8ffd3f6c6c48a35caa662772a9e&amp;type=3#ItemElement" />
+    <DraggableObject compatible-target-tag="item" style="width: 136px; height: 136px; justify-content: flex-start; align-items: stretch; border-top-left-radius: 8px; border-top-right-radius: 8px; border-bottom-right-radius: 8px; border-bottom-left-radius: 8px;">
+        <ItemElement style="flex-grow: 1; background-color: rgba(207, 207, 207, 0.3); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; padding-top: 6px; padding-right: 6px; padding-bottom: 6px; padding-left: 6px;">
+            <ui:VisualElement name="image" style="flex-grow: 1; flex-shrink: 0; background-image: resource(&apos;Images/Scales/512_EscamaNegra&apos;); -unity-background-scale-mode: scale-to-fit;" />
+            <ui:Label tabindex="-1" text="12" parse-escape-sequences="true" display-tooltip-when-elided="true" name="quantity" style="-unity-text-align: upper-center; flex-shrink: 1;" />
+            <ui:Label tabindex="-1" text="Black Scale" parse-escape-sequences="true" display-tooltip-when-elided="true" name="displayName" style="-unity-text-align: upper-center;" />
+        </ItemElement>
+    </DraggableObject>
+</ui:UXML>
