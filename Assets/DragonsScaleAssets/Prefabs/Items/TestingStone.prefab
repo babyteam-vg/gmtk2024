@@ -119,8 +119,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2afb44efab2a8c4fb7b4889381cb8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultNoiseStrong: 0
+  defaultNoiseStrong: 1
   noiseOnStep: 0
+  noiseSound: {fileID: 8300000, guid: 9ed95a1735d2a774f857a56e073b6a6f, type: 3}
+  noiseSoundWeak: {fileID: 8300000, guid: 9ed95a1735d2a774f857a56e073b6a6f, type: 3}
 --- !u!114 &3366424800442191741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,5 +135,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd037e30a496694468bec0919e6a11e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentIndex: 0
+  pivotID: 0
   _itemDescription: {fileID: 11400000, guid: 56628c7e747e5b34c8890942a4fba9ad, type: 2}
+  noiseOnPick: 1

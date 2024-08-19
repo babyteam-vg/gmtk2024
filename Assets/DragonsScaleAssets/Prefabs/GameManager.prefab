@@ -63,13 +63,15 @@ MonoBehaviour:
   - {fileID: 3366424800442191741, guid: 1b6624ed8608b9641bae296eacbb70ba, type: 3}
   - {fileID: 4967872351028148655, guid: 1651db60ccd1e404882f2450cbefab56, type: 3}
   dragon:
-    data: {fileID: 11400000, guid: 796f594080981444886b1d935627e013, type: 2}
-    currentTime: 10
-  timeToSpawnDragon: 10
-  margenTimeToSpawnDragon: 20
+    data: {fileID: 0}
+    currentTime: 0
+  timeToSpawnDragon: 60
+  margenTimeToSpawnDragon: 30
+  currentTimeDragonSpawner: 0
   pickableInstances: []
   totalRecogibles: 15
   timeToSpawnPickable: 10
+  dragonArriveSound: {fileID: 0}
 --- !u!1 &351271073494871819
 GameObject:
   m_ObjectHideFlags: 0
@@ -580,6 +582,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8fea424e68d944db47832426783ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activePlayer: 2
   playersRooms:
   - {fileID: 3972456330568197709}
   - {fileID: 213176584476219489}

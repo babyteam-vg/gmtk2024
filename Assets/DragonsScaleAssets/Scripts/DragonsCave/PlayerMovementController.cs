@@ -16,6 +16,9 @@ public class PlayerMovementController : MonoBehaviour
     private bool isSoft;
     private float walkingTime;
     [SerializeField] private float timeToStepEvent;
+    [SerializeField] private AudioClip stepSound;
+    [SerializeField, Range(0f,1f)] private float stepVolumeProportional;
+    [SerializeField] private AudioSource source;
 
 
     private PicakbleObject objectToPick;
@@ -48,8 +51,9 @@ public class PlayerMovementController : MonoBehaviour
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
             if (walkingTime >= timeToStepEvent)
             {
-                stepEvent?.Invoke(isSoft);
                 walkingTime = 0f;
+                stepEvent?.Invoke(isSoft);
+                AudioManager.Instance.PlaySFX(stepSound, stepVolumeProportional);
             }
         }
         else

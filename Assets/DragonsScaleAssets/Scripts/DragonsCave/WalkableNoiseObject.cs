@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
+
 public class WalkableNoiseObject : MonoBehaviour
 {
 
@@ -37,14 +38,18 @@ public class WalkableNoiseObject : MonoBehaviour
         }
     }
     
-    private void MakeNoise(bool soft= false)
+    public void MakeNoise(bool soft= false)
     {
         float value = defaultNoiseStrong;
         if (soft)
         {
             value = value / 2;
-            
+            AudioManager.Instance.PlaySFX(noiseSoundWeak);
         }
-        OnNoiseEvent?.Invoke(value); //no se si el noise se hace fuerte o debil.
+        else
+        {
+            AudioManager.Instance.PlaySFX(noiseSound);
+        }
+        OnNoiseEvent?.Invoke(value);
     }
 }
