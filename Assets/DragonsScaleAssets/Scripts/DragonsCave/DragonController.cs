@@ -8,6 +8,8 @@ public class DragonController : MonoBehaviour
 {
     public DragonInstance instanceData;
     [SerializeField] private MeshRenderer _renderer;
+    [SerializeField] private AudioClip sleepSound;
+    [SerializeField] private GameObject zSign;
     void OnEnable()
     {
         WalkableNoiseObject.OnNoiseEvent += OnNoiseEventHandle;
@@ -20,6 +22,11 @@ public class DragonController : MonoBehaviour
 
     void OnNoiseEventHandle(float noiseValue)
     {
-        instanceData.currentTime -= noiseValue;
+        CaveManager.Instance.dragon.currentTime -= noiseValue;
+    }
+
+    public void Update()
+    {
+        zSign.transform.localScale = new Vector3(1,1,0) * (CaveManager.Instance.dragon.currentTime/CaveManager.Instance.dragon.data.sleepTotalTime)+ Vector3.forward;
     }
 }

@@ -111,7 +111,8 @@ public class CraftingManagement : MonoBehaviour
     private void LoadLeftScene()
     {
         AudioManager.Instance.SetActivePlayerByIndex(0,true);
-        TransitionManager.Instance.LoadScene("Cave",true);
+        //TransitionManager.Instance.LoadScene("Cave",true);
+        TransitionManager.Instance.LoadScene("SampleScene",true);
     }
 
     private void LoadRightScene()

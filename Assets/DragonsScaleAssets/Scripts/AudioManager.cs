@@ -85,9 +85,9 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    public void PlaySFX(AudioClip sfx)
+    public void PlaySFX(AudioClip sfx, float volume =1f)
     {
-        playerSfx.PlayOneShot(sfx);
+        playerSfx.PlayOneShot(sfx, volume*sfxVolume);
     }
 
     public void PlayDragonSFX(AudioClip sfx)

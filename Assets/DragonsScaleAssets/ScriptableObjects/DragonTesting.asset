@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: DragonTesting
   m_EditorClassIdentifier: 
   type: 0
-  sleepTotalTime: 15
+  sleepTotalTime: 60
   prefab: {fileID: 3783789720886338806, guid: c8f7215b75032e34ab89f9beca1c9143, type: 3}
+  item: {fileID: 0}
