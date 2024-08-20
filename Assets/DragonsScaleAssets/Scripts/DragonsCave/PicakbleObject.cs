@@ -17,7 +17,6 @@ public class PicakbleObject : MonoBehaviour
         {
             noise.MakeNoise(true);
         }
-
         CaveSceneController.Instance.RemovePickable(pivotID);
         //Remove del Cave
         Destroy(this.gameObject);
