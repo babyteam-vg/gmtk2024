@@ -30,22 +30,12 @@ public class CraftingManagement : MonoBehaviour
 
     [Header("Preview")] [CanBeNull] public string previewImageId = "PreviewImage";
 
-    [Header("Scene Management")] public string leftSceneButton = "LeftBar";
-    Button _leftSceneButton;
-    public string rightSceneButton = "RightBar";
-    Button _rightSceneButton;
-
-
     private void Start()
     {
         _document = GetComponent<UIDocument>();
 
         _craftingButton = _document.rootVisualElement.Q<Button>(craftingButton);
         _craftingButton.clicked += Craft;
-        _leftSceneButton = _document.rootVisualElement.Q<Button>(leftSceneButton);
-        _leftSceneButton.clicked += LoadLeftScene;
-        _rightSceneButton = _document.rootVisualElement.Q<Button>(rightSceneButton);
-        _rightSceneButton.clicked += LoadRightScene;
 
         foreach (DragTarget target in IterateTargets())
         {
@@ -160,19 +150,6 @@ public class CraftingManagement : MonoBehaviour
         return item?.Item;
     }
 
-    private void LoadLeftScene()
-    {
-        AudioManager.Instance.SetActivePlayerByIndex(0, true);
-        //TransitionManager.Instance.LoadScene("Cave",true);
-        TransitionManager.Instance.LoadScene("SampleScene", true);
-    }
-
-    private void LoadRightScene()
-    {
-        AudioManager.Instance.SetActivePlayerByIndex(2, true);
-        TransitionManager.Instance.LoadScene("Shop", true);
-    }
-
     private void UpdatePreview()
     {
         VisualElement previewImage = _document.rootVisualElement.Q<VisualElement>(previewImageId);
@@ -207,7 +184,5 @@ public class CraftingManagement : MonoBehaviour
         }
 
         _craftingButton.clicked -= Craft;
-        _leftSceneButton.clicked -= LoadLeftScene;
-        _rightSceneButton.clicked -= LoadRightScene;
     }
 }
