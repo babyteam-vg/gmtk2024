@@ -98,10 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2afb44efab2a8c4fb7b4889381cb8aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultNoiseStrong: 1
+  defaultNoiseStrong: 2
   noiseOnStep: 1
   noiseSound: {fileID: 8300000, guid: 9ed95a1735d2a774f857a56e073b6a6f, type: 3}
-  noiseSoundWeak: {fileID: 8300000, guid: 9ed95a1735d2a774f857a56e073b6a6f, type: 3}
 --- !u!114 &4967872351028148655
 MonoBehaviour:
   m_ObjectHideFlags: 0

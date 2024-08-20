@@ -10,6 +10,7 @@ public class PickableSpot
 {
     public int id;
     public Transform pivot;
+    public bool used;
     public PickableInstance pickable;
 }
 
@@ -77,20 +78,23 @@ public class CaveSceneController : MonoBehaviour
 
     public void SpawnPickable(PickableInstance pickable)
     {
-        List<PickableSpot> availableSpots = pickableSpots.FindAll((x) => x.pickable.pickablePrefab == null);
+        List<PickableSpot> availableSpots = pickableSpots.FindAll((x) => x.used == false);
         PickableSpot spot = availableSpots[Random.Range(0, availableSpots.Count)];
         spot.pickable = pickable;
         spot.id = pickable.index;
+        spot.used = true;
         PicakbleObject obj = Instantiate(pickable.pickablePrefab, spot.pivot);
-        obj.pivotID = spot.id;
+        obj.pivotID = pickable.index;
     }
 
     public void RemovePickable(int pivotID)
     {
         PickableSpot spot = pickableSpots.FirstOrDefault((x) => x.id == pivotID);
         PickableInstance instance = CaveManager.Instance.pickableInstances.Find((x) => x.index == spot.id);
-        CaveManager.Instance.pickableInstances.Remove(instance);
         spot.pickable = null;
+        spot.id =-1;
+        spot.used =false;
+        CaveManager.Instance.pickableInstances.Remove(instance);
     }
 
     
