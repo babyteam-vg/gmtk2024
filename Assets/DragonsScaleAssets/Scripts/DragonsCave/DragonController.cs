@@ -7,7 +7,6 @@ using UnityEngine;
 public class DragonController : MonoBehaviour
 {
     public DragonInstance instanceData;
-    [SerializeField] private MeshRenderer _renderer;
     [SerializeField] private AudioClip sleepSound;
     [SerializeField] private GameObject zSign;
     void OnEnable()
