@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6439e3c31bf4022a282458933280899, type: 3}
+  m_Name: Shovel
+  m_EditorClassIdentifier: 
+  defaultResultItem: {fileID: 11400000, guid: 2d143c985ada88d448cbb9564bce3c70, type: 2}
+  conditionalResults:
+  - itemToCheck: {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 1818659e1f885504e8340dc4aa80ee22, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 795d85032219e504098d289c9057f96f, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 56628c7e747e5b34c8890942a4fba9ad, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 2d143c985ada88d448cbb9564bce3c70, type: 2}
+  ingredientTL:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientTC:
+    type: 2
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientTR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientML:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientMC:
+    type: 1
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 7
+  ingredientMR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientBL:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientBC:
+    type: 1
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 7
+  ingredientBR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5

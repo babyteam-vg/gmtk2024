@@ -51,18 +51,14 @@ public class DraggableObject : VisualElement
     {
         return _preview;
     }
-    
-    public VisualElement ResetPreview()
-    {
-        Add(_preview);
-        return _preview;
-    }
 
-    public void SetPreview(VisualElement element)
+    public void Init(VisualElement child, VisualElement dragPreview)
     {
         Clear();
-        _preview = element;
-        ResetPreview();
+        _preview = dragPreview;
+        _preview.style.display = DisplayStyle.None;
+        dragPreview.RemoveFromHierarchy();
+        Add(child);
     }
 
     public void SetCompatibleTargetTags(string compatibleTargetTag)
@@ -74,19 +70,5 @@ public class DraggableObject : VisualElement
     {
         // left as a function knowing the current simplicity to expand the logic later if needed
         return CompatibleTargetTags == objTargetTag;
-    }
-
-    /// <summary>
-    /// Gets the image that will be used to show this object is being used in a drag target.
-    /// Currently it will pick the background image of a child element with the name "image"
-    /// in the preview.
-    /// </summary>
-    /// <returns>
-    /// The image that will be used to show this object is being used in a drag target.
-    /// </returns>
-    public StyleBackground? GetPreviewImage()
-    {
-        VisualElement previewImage = _preview.Q<VisualElement>("image");
-        return previewImage?.style?.backgroundImage;
     }
 }

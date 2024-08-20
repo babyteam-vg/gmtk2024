@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rock
   m_EditorClassIdentifier: 
   baseId: Stone
-  itemType: 6
+  itemType: 5
   displayName: Stone
   baseMonetaryValue: 0
   ingredientValue: 0

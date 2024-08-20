@@ -57,11 +57,8 @@ public class ItemDescription : ScriptableObject
      */
     public static Dictionary<string, ItemDescription> KnownItems = new();
 
-    /// <summary>
-    /// The image of the item
-    /// </summary>
     public Texture2D Image;
-    
+
     private string storedId;
 
     public void Start()
@@ -88,5 +85,4 @@ public class ItemDescription : ScriptableObject
     {
         return KnownItems.GetValueOrDefault(itemId);
     }
-
 }

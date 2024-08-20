@@ -227,6 +227,7 @@ GameObject:
   - component: {fileID: 649912540}
   - component: {fileID: 649912541}
   - component: {fileID: 649912542}
+  - component: {fileID: 649912543}
   m_Layer: 5
   m_Name: CraftingUI
   m_TagString: Untagged
@@ -292,10 +293,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8d38f6f32a409db765bc9744a1359b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugItem: {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
-  debugItem2: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+  debugItems:
+  - {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
+  - {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+  - {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
+  - {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+  - {fileID: 11400000, guid: 56628c7e747e5b34c8890942a4fba9ad, type: 2}
   containerId: InventoryContent
   itemTemplate: {fileID: 9197481963319205126, guid: b6c5f85fcb7baf74f9e262adbd5795c5, type: 3}
+  itemPreviewTemplate: {fileID: 9197481963319205126, guid: 0a11a07fa60ff1a458018168dbaef785, type: 3}
   dragTargetTag: item
 --- !u!114 &649912542
 MonoBehaviour:
@@ -320,8 +326,25 @@ MonoBehaviour:
   slotBL: CraftingBL
   slotBC: CraftingBC
   slotBR: CraftingBR
+  previewImageId: PreviewImage
+--- !u!114 &649912543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 649912537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba30c9be4e2cb4e41ad106d93a7e8b49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   leftSceneButton: LeftBar
   rightSceneButton: RightBar
+  leftSceneName: SampleScene
+  leftSceneAudioIndex: 0
+  rightSceneName: Shop
+  rightSceneAudioIndex: 2
 --- !u!1 &2021784430
 GameObject:
   m_ObjectHideFlags: 0

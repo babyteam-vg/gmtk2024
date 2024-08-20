@@ -3,7 +3,7 @@
     <Style src="project://database/Assets/DragonsScaleAssets/UI/crafting.uss?fileID=7433441132597879392&amp;guid=276a39004918379479020afe77661780&amp;type=3#crafting" />
     <Style src="project://database/Assets/DragonsScaleAssets/UI/Components/ItemElement.uss?fileID=7433441132597879392&amp;guid=40fbd8ffd3f6c6c48a35caa662772a9e&amp;type=3#ItemElement" />
     <ui:VisualElement name="Container" style="flex-grow: 1; flex-direction: row; background-image: resource(&apos;UI/GMTK_GamefCrafteo&apos;); -unity-background-scale-mode: flex-start; flex-wrap: nowrap;">
-        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="LeftBar" style="background-color: rgba(255, 179, 114, 0.5); justify-content: center; align-items: center; width: 23px;">
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="LeftBar" style="background-color: rgba(255, 179, 114, 0.5); justify-content: center; align-items: center; width: 23px; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; background-image: resource(&apos;UI/Arrow 1&apos;); -unity-background-scale-mode: scale-to-fit;">
             <ui:VisualElement name="Arrow" class="arrow" style="background-color: rgba(255, 255, 255, 0.58);" />
         </ui:Button>
         <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; margin-top: 92px; margin-bottom: 92px;">
@@ -11,7 +11,9 @@
                 <ui:VisualElement name="Crafting" style="flex-grow: 1; justify-content: space-between; align-items: center; margin-left: 42px; margin-right: 42px; margin-top: 0; margin-bottom: 0; background-color: rgba(0, 0, 0, 0.56); border-top-left-radius: 24px; border-top-right-radius: 24px; border-bottom-right-radius: 24px; border-bottom-left-radius: 24px; flex-wrap: nowrap; padding-top: 25px; padding-right: 36px; padding-left: 36px; align-self: auto; padding-bottom: 25px; max-width: 857px;">
                     <ui:VisualElement name="CraftingHeader" style="flex-grow: 0; flex-basis: 189px; flex-shrink: 0; align-items: center; align-self: auto; flex-direction: column; background-color: rgba(255, 255, 255, 0); padding-bottom: 19px; justify-content: center; max-width: 414px;">
                         <ui:VisualElement name="ResultContainer" style="flex-grow: 1; justify-content: center; align-items: center; background-color: rgba(193, 193, 193, 0); -unity-background-image-tint-color: rgba(226, 226, 226, 0.63); align-self: auto; flex-shrink: 0; flex-direction: row;">
-                            <ui:VisualElement name="ResultSlot" class="crafting-slot item-slot" style="background-color: rgba(2, 2, 2, 0.7);" />
+                            <ui:VisualElement name="ResultSlot" class="crafting-slot item-slot" style="background-color: rgba(2, 2, 2, 0.7);">
+                                <ui:VisualElement name="PreviewImage" style="flex-grow: 1; background-image: none;" />
+                            </ui:VisualElement>
                         </ui:VisualElement>
                         <ui:Button text="Craft" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CraftingButton" style="justify-content: flex-start; align-self: stretch;" />
                     </ui:VisualElement>
@@ -66,8 +68,8 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="RightBar" style="background-color: rgba(255, 190, 134, 0.5);">
-            <ui:VisualElement name="Arrow" class="arrow arrow-right" />
+        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="RightBar" style="background-color: rgba(255, 190, 134, 0.5); justify-content: space-around; align-self: stretch; padding-top: 0; padding-right: 0; padding-bottom: 0; padding-left: 0; width: 23px;">
+            <ui:VisualElement name="Arrow" class="arrow arrow-right" style="-unity-background-scale-mode: scale-to-fit; background-image: resource(&apos;UI/Arrow 1&apos;); flex-grow: 1; align-self: stretch; justify-content: flex-start; width: 100%; height: 100%; scale: -1 1;" />
         </ui:Button>
     </ui:VisualElement>
 </ui:UXML>

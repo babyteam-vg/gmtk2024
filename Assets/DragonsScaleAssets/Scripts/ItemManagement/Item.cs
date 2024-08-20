@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 /// <summary>
 /// An item in-game.
@@ -46,5 +47,10 @@ public class Item
         if (obj is not Item) return false;
 
         return GetHashCode() == obj.GetHashCode();
+    }
+
+    public override string ToString()
+    {
+        return Description.baseId;
     }
 }

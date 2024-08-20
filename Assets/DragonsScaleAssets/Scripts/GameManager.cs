@@ -16,6 +16,14 @@ public class PlayerData
 
     public int coins;
     public Inventory inventory;
+
+    public Action<int> CoinsChanged;
+
+    public void AddCoins(int amount)
+    {
+        coins += amount;
+        CoinsChanged?.Invoke(coins);
+    }
 }
 
 
