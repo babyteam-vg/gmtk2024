@@ -49,11 +49,14 @@ public class PlayerMovementController : MonoBehaviour
             walkingTime += Time.deltaTime;
             Quaternion toRotation = Quaternion.LookRotation(movement, Vector3.up);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-            if (walkingTime >= timeToStepEvent)
+            float value = 1;
+            if (isSoft) value = value/speedHold;
+            if (walkingTime >= timeToStepEvent*value)
             {
                 walkingTime = 0f;
                 stepEvent?.Invoke(isSoft);
-                AudioManager.Instance.PlaySFX(stepSound, stepVolumeProportional);
+                if(isSoft)AudioManager.Instance.PlaySFX(stepSound, stepVolumeProportional/2);
+                else{AudioManager.Instance.PlaySFX(stepSound, stepVolumeProportional);}
             }
         }
         else
@@ -77,6 +80,7 @@ public class PlayerMovementController : MonoBehaviour
 
         if (other.transform.tag == "Finish")
         {
+            AudioManager.Instance.StopDragonSFX();
             AudioManager.Instance.SetActivePlayerByIndex(1,true);
             TransitionManager.Instance.LoadScene("Crafting",true);
         }

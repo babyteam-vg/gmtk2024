@@ -90,9 +90,16 @@ public class AudioManager : MonoBehaviour
         playerSfx.PlayOneShot(sfx, volume*sfxVolume);
     }
 
-    public void PlayDragonSFX(AudioClip sfx)
+    public void PlayDragonSFX(AudioClip sfx,bool playonLeft)
     {
+        float value = 0f;
+        if (playonLeft) value = -1f;
+        playerDragonSfx.panStereo = value;
         playerDragonSfx.PlayOneShot(sfx);
+    }
+    public void StopDragonSFX()
+    {
+        playerDragonSfx.Stop();
     }
     
      private IEnumerator FadeAudio(AudioSource AToPlay,float start, float end, Action onComplete=null)                 

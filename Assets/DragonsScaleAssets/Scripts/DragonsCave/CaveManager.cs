@@ -62,6 +62,7 @@ public class CaveManager : MonoBehaviour
     private float currentTimePickableSpawner;
 
     [SerializeField] private AudioClip dragonArriveSound;
+    [SerializeField] private AudioClip dragonExitSound;
     
     private void Awake() 
     { 
@@ -141,8 +142,7 @@ public class CaveManager : MonoBehaviour
         
         dragon.data = dragonsDatasByLevel[GameManager.Instance.GetCurrentLevel()].GetDragon();
         dragon.currentTime = dragon.data.sleepTotalTime;
-        AudioManager.Instance.PlaySFX(dragonArriveSound);
-        //CaveSceneController.Instance.DragonAlert(false);
+        AudioManager.Instance.PlayDragonSFX(dragonArriveSound,true);
         
         if (CaveSceneController.Instance != null)
         {
@@ -161,7 +161,7 @@ public class CaveManager : MonoBehaviour
 
         dragon.data = null;
         currentTimeDragonSpawner = Random.Range(timeToSpawnDragon - margenTimeToSpawnDragon, timeToSpawnDragon + margenTimeToSpawnDragon);
-        //AudioManager.Instance.PlaySFX(DragonExit);
+        AudioManager.Instance.PlayDragonSFX(dragonExitSound,true);
     }
 
     public void PlayerDiesByDragon()

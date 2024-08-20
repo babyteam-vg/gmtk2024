@@ -25,6 +25,11 @@ public class DragonController : MonoBehaviour
         CaveManager.Instance.dragon.currentTime -= noiseValue;
     }
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayDragonSFX(sleepSound,false);
+    }
+
     public void Update()
     {
         zSign.transform.localScale = new Vector3(1,1,0) * (CaveManager.Instance.dragon.currentTime/CaveManager.Instance.dragon.data.sleepTotalTime)+ Vector3.forward;

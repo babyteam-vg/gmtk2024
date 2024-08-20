@@ -11,7 +11,6 @@ public class WalkableNoiseObject : MonoBehaviour
     public float defaultNoiseStrong;
     [SerializeField] private bool noiseOnStep;
     [SerializeField] private AudioClip noiseSound;
-    [SerializeField] private AudioClip noiseSoundWeak;
     public delegate void NoiseEvent(float strong);
     public static event NoiseEvent OnNoiseEvent;
     private void OnCollisionEnter(Collision collision)
@@ -41,15 +40,9 @@ public class WalkableNoiseObject : MonoBehaviour
     public void MakeNoise(bool soft= false)
     {
         float value = defaultNoiseStrong;
-        if (soft)
-        {
-            value = value / 2;
-            AudioManager.Instance.PlaySFX(noiseSoundWeak);
-        }
-        else
-        {
-            AudioManager.Instance.PlaySFX(noiseSound);
-        }
+        if (soft) value = value / 3;
+            AudioManager.Instance.PlaySFX(noiseSound,value/defaultNoiseStrong);
+        
         OnNoiseEvent?.Invoke(value);
     }
 }

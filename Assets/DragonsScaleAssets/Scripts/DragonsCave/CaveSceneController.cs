@@ -69,8 +69,11 @@ public class CaveSceneController : MonoBehaviour
 
     public void DespawnDragon()
     {
+        AudioManager.Instance.StopDragonSFX();
+        // MUERES
         Destroy(dragonObj.gameObject);
     }
+
 
     public void SpawnPickable(PickableInstance pickable)
     {
