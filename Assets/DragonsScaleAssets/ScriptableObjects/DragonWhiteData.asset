@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47eb50204bff19446b16938bb0fd93e5, type: 3}
-  m_Name: DragonTesting 3
+  m_Name: DragonWhiteData
   m_EditorClassIdentifier: 
-  type: 0
-  sleepTotalTime: 60
-  prefab: {fileID: 3783789720886338806, guid: c8bc3684cac9aaf4891aaaba0bf64614, type: 3}
+  type: 5
+  sleepTotalTime: 40
+  prefab: {fileID: 8770933474295302788, guid: fffc8b66f2cf23c499df21228e72b575, type: 3}
   item: {fileID: 0}

@@ -1500,7 +1500,7 @@ Transform:
   m_GameObject: {fileID: 1085439528}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2941,42 +2941,226 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3144126489576067881, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: sfxVolume
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3144126489576067881, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: activePlayer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: dragon.data
-      value: 
-      objectReference: {fileID: 11400000, guid: 70f232c8f7a0ef04b8cfd111b086ef10, type: 2}
-    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: dragonArriveSound
-      value: 
-      objectReference: {fileID: 8300000, guid: 10573dc4817f3c14d9349ef709630a85, type: 3}
     - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
       propertyPath: timeToSpawnDragon
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: dragon.currentTime
+      propertyPath: dragonsDatasByLevel.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[1].dragonsInLevel.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[2].dragonsInLevel.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[0].weight
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[1].weight
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[2].weight
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[3].weight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[4].weight
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: margenTimeToSpawnDragon
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[5].weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[6].weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[1].dragonsInLevel.Array.data[0].weight
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[2].dragonsInLevel.Array.data[0].weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[2].dragonsInLevel.Array.data[1].weight
       value: 15
       objectReference: {fileID: 0}
-    - target: {fileID: 5917920710560080960, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: Loop
-      value: 1
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[2].dragonsInLevel.Array.data[3].weight
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 6391704890861778332, guid: 869f29601d51cd647a964e87976cc061, type: 3}
-      propertyPath: m_SortingOrder
-      value: 200
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[0].weight
+      value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[1].weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[2].weight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[3].weight
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[0].weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[1].weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[2].weight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[3].weight
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[4].weight
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[5].weight
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[6].weight
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[0].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 480f4c436f2d7ad4cb12b91ca2efe425, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[1].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0290d5c4e2749d84598ce33ebbc74d08, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[2].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 04dd06fa05e99f2498835e9e1143ff16, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[3].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 578499e432847ae4e99d1832a67af1eb, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[4].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 522f816f58027d249b74d7047d9e7789, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[5].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 514e7d20a5b958e4ba29b79244b9e367, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[0].dragonsInLevel.Array.data[6].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 514e7d20a5b958e4ba29b79244b9e367, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[0].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0290d5c4e2749d84598ce33ebbc74d08, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[1].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[2].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[3].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 04dd06fa05e99f2498835e9e1143ff16, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[4].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 750f573593c478448a0b6cad33091eae, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[3].dragonsInLevel.Array.data[5].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 578499e432847ae4e99d1832a67af1eb, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[4].dragonsInLevel.Array.data[0].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[4].dragonsInLevel.Array.data[1].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[4].dragonsInLevel.Array.data[2].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 750f573593c478448a0b6cad33091eae, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[4].dragonsInLevel.Array.data[4].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 578499e432847ae4e99d1832a67af1eb, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[4].dragonsInLevel.Array.data[5].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 522f816f58027d249b74d7047d9e7789, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[4].dragonsInLevel.Array.data[6].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 514e7d20a5b958e4ba29b79244b9e367, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[0].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[1].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[2].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 750f573593c478448a0b6cad33091eae, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[3].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 04dd06fa05e99f2498835e9e1143ff16, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[4].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 578499e432847ae4e99d1832a67af1eb, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[5].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 522f816f58027d249b74d7047d9e7789, type: 2}
+    - target: {fileID: 4497595657173641377, guid: 869f29601d51cd647a964e87976cc061, type: 3}
+      propertyPath: dragonsDatasByLevel.Array.data[5].dragonsInLevel.Array.data[6].dragonData
+      value: 
+      objectReference: {fileID: 11400000, guid: 514e7d20a5b958e4ba29b79244b9e367, type: 2}
     - target: {fileID: 7471454965677812460, guid: 869f29601d51cd647a964e87976cc061, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -3023,7 +3207,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8463443156542779005, guid: 869f29601d51cd647a964e87976cc061, type: 3}
       propertyPath: playerData.coins
-      value: 4999
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

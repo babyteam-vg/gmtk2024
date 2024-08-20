@@ -48,30 +48,74 @@ MonoBehaviour:
   - dragonsInLevel:
     - dragonData: {fileID: 11400000, guid: 480f4c436f2d7ad4cb12b91ca2efe425, type: 2}
       weight: 60
-    - dragonData: {fileID: 11400000, guid: 70f232c8f7a0ef04b8cfd111b086ef10, type: 2}
+    - dragonData: {fileID: 11400000, guid: 0290d5c4e2749d84598ce33ebbc74d08, type: 2}
       weight: 40
   - dragonsInLevel:
     - dragonData: {fileID: 11400000, guid: 480f4c436f2d7ad4cb12b91ca2efe425, type: 2}
       weight: 20
-    - dragonData: {fileID: 11400000, guid: 70f232c8f7a0ef04b8cfd111b086ef10, type: 2}
+    - dragonData: {fileID: 11400000, guid: 0290d5c4e2749d84598ce33ebbc74d08, type: 2}
       weight: 40
-    - dragonData: {fileID: 11400000, guid: 796f594080981444886b1d935627e013, type: 2}
+    - dragonData: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
       weight: 30
-    - dragonData: {fileID: 11400000, guid: 2585458c3ae351c4e9899bb996392bc6, type: 2}
+    - dragonData: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
       weight: 10
+  - dragonsInLevel:
+    - dragonData: {fileID: 11400000, guid: 480f4c436f2d7ad4cb12b91ca2efe425, type: 2}
+      weight: 10
+    - dragonData: {fileID: 11400000, guid: 0290d5c4e2749d84598ce33ebbc74d08, type: 2}
+      weight: 15
+    - dragonData: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
+      weight: 30
+    - dragonData: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
+      weight: 20
+    - dragonData: {fileID: 11400000, guid: 04dd06fa05e99f2498835e9e1143ff16, type: 2}
+      weight: 15
+    - dragonData: {fileID: 11400000, guid: 750f573593c478448a0b6cad33091eae, type: 2}
+      weight: 10
+  - dragonsInLevel:
+    - dragonData: {fileID: 11400000, guid: 0290d5c4e2749d84598ce33ebbc74d08, type: 2}
+      weight: 5
+    - dragonData: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
+      weight: 10
+    - dragonData: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
+      weight: 15
+    - dragonData: {fileID: 11400000, guid: 04dd06fa05e99f2498835e9e1143ff16, type: 2}
+      weight: 30
+    - dragonData: {fileID: 11400000, guid: 750f573593c478448a0b6cad33091eae, type: 2}
+      weight: 15
+    - dragonData: {fileID: 11400000, guid: 578499e432847ae4e99d1832a67af1eb, type: 2}
+      weight: 10
+    - dragonData: {fileID: 11400000, guid: 522f816f58027d249b74d7047d9e7789, type: 2}
+      weight: 5
+  - dragonsInLevel:
+    - dragonData: {fileID: 11400000, guid: 1aae0b30b110aff43a40d725d590fd32, type: 2}
+      weight: 5
+    - dragonData: {fileID: 11400000, guid: de98a6e74fbd1f24ebb8e01dfa158705, type: 2}
+      weight: 10
+    - dragonData: {fileID: 11400000, guid: 750f573593c478448a0b6cad33091eae, type: 2}
+      weight: 15
+    - dragonData: {fileID: 11400000, guid: 04dd06fa05e99f2498835e9e1143ff16, type: 2}
+      weight: 30
+    - dragonData: {fileID: 11400000, guid: 578499e432847ae4e99d1832a67af1eb, type: 2}
+      weight: 15
+    - dragonData: {fileID: 11400000, guid: 522f816f58027d249b74d7047d9e7789, type: 2}
+      weight: 10
+    - dragonData: {fileID: 11400000, guid: 514e7d20a5b958e4ba29b79244b9e367, type: 2}
+      weight: 5
   pickablesPrefabs:
   - {fileID: 3366424800442191741, guid: 1b6624ed8608b9641bae296eacbb70ba, type: 3}
   - {fileID: 4967872351028148655, guid: 1651db60ccd1e404882f2450cbefab56, type: 3}
   dragon:
-    data: {fileID: 0}
-    currentTime: 0
+    data: {fileID: 11400000, guid: 70f232c8f7a0ef04b8cfd111b086ef10, type: 2}
+    currentTime: 10
   timeToSpawnDragon: 60
-  margenTimeToSpawnDragon: 30
+  margenTimeToSpawnDragon: 15
   currentTimeDragonSpawner: 0
   pickableInstances: []
   totalRecogibles: 15
   timeToSpawnPickable: 10
-  dragonArriveSound: {fileID: 0}
+  dragonArriveSound: {fileID: 8300000, guid: 10573dc4817f3c14d9349ef709630a85, type: 3}
+  dragonExitSound: {fileID: 0}
 --- !u!1 &351271073494871819
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +521,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 120
+  m_SortingOrder: 200
   m_TargetDisplay: 0
 --- !u!114 &7330963253900173791
 MonoBehaviour:
@@ -582,7 +626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8fea424e68d944db47832426783ba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activePlayer: 2
+  activePlayer: 0
   playersRooms:
   - {fileID: 3972456330568197709}
   - {fileID: 213176584476219489}
@@ -591,7 +635,7 @@ MonoBehaviour:
   playerSfx: {fileID: 180505378139918211}
   playerDragonSfx: {fileID: 5917920710560080960}
   musicVolume: 1
-  sfxVolume: 0.863
+  sfxVolume: 1
 --- !u!1 &5107604641525972977
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,7 +810,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -994,7 +1038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData:
-    coins: 1000
+    coins: 4999
 --- !u!1 &8470450172176375495
 GameObject:
   m_ObjectHideFlags: 0
