@@ -116,7 +116,7 @@ public class CraftingManagement : MonoBehaviour
         }
 
         List<Item> ingredients = selection.ListItems();
-        Item resultItem = new(recipe.resultItem, ingredients);
+        Item resultItem = recipe.GetResultFor(ingredients);
 
         GameManager.Instance.playerData.inventory.Transmutate(ingredients, resultItem);
     }
@@ -168,7 +168,7 @@ public class CraftingManagement : MonoBehaviour
             return;
         }
 
-        previewImage.style.backgroundImage = recipe.resultItem.Image;
+        previewImage.style.backgroundImage = recipe.defaultResultItem.Image;
     }
 
     private void OnDestroy()

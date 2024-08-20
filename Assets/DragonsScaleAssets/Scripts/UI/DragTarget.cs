@@ -58,7 +58,6 @@ public class DragTarget: VisualElement
         VisualElement previewImageElement = GetPreviewImageElement();
         if (previewImageElement != null)
         {
-            Debug.Log("Adding preview element");
             StyleBackground backgroundImage = draggableObject.GetPreviewElement()?.style?.backgroundImage ?? null;
             previewImageElement.style.backgroundImage = backgroundImage;
         }

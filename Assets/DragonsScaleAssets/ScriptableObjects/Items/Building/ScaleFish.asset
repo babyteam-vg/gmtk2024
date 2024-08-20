@@ -15,6 +15,6 @@ MonoBehaviour:
   baseId: FIsh Scale
   itemType: 5
   displayName: Fish Scale
-  baseMonetaryValue: 1
+  baseMonetaryValue: 0
   ingredientValue: 1
   Image: {fileID: 0}

@@ -15,6 +15,6 @@ MonoBehaviour:
   baseId: Silver Scale
   itemType: 5
   displayName: Silver Scale
-  baseMonetaryValue: 225
+  baseMonetaryValue: 0
   ingredientValue: 225
   Image: {fileID: 0}

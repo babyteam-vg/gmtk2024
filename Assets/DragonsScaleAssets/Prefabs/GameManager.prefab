@@ -1,5 +1,63 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &218899563776050902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9071622784002490336}
+  - component: {fileID: 5668839895498831136}
+  m_Layer: 6
+  m_Name: ClientManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9071622784002490336
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218899563776050902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7906229998502430713}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5668839895498831136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 218899563776050902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb4c0040db8340e6be7c453e2405cf62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clientTextures:
+  - {fileID: 2800000, guid: 4e76fa6cc050db94d90a747494cf9d84, type: 3}
+  clientNeeds:
+  - itemType: 0
+    sprite: {fileID: 2800000, guid: 95d2348346df33245a44e33c44c14629, type: 3}
+  - itemType: 1
+    sprite: {fileID: 2800000, guid: 0286567e631562b489987376501e668a, type: 3}
+  - itemType: 2
+    sprite: {fileID: 2800000, guid: 2aba552625964a14d8ee475e6bbf3b6c, type: 3}
+  - itemType: 3
+    sprite: {fileID: 2800000, guid: ef6611681664808428463f8638307158, type: 3}
+  - itemType: 4
+    sprite: {fileID: 2800000, guid: e2cf7b26c6c187544ad98ec7640ea66e, type: 3}
+  maxClients: 5
 --- !u!1 &284460916841672122
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,6 +130,7 @@ MonoBehaviour:
   totalRecogibles: 15
   timeToSpawnPickable: 10
   dragonArriveSound: {fileID: 0}
+  dragonExitSound: {fileID: 0}
 --- !u!1 &351271073494871819
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +1035,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 9071622784002490336}
   - {fileID: 644312773048834792}
   - {fileID: 7022117508153798316}
   - {fileID: 1829158847297764562}

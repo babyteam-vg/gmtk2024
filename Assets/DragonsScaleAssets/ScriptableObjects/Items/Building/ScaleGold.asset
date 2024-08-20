@@ -15,6 +15,6 @@ MonoBehaviour:
   baseId: Golden Scale
   itemType: 5
   displayName: Golden Scale
-  baseMonetaryValue: 250
+  baseMonetaryValue: 0
   ingredientValue: 250
   Image: {fileID: 0}

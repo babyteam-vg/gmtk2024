@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6439e3c31bf4022a282458933280899, type: 3}
   m_Name: Axe
   m_EditorClassIdentifier: 
-  resultItem: {fileID: 11400000, guid: 3f833a59be6f00247befc9b41cc291ff, type: 2}
+  defaultResultItem: {fileID: 11400000, guid: 3f833a59be6f00247befc9b41cc291ff, type: 2}
+  conditionalResults: []
   ingredientTL:
     type: 2
     allowedItem: {fileID: 0}
     allowedItemType: 5
-  ingredientTM:
+  ingredientTC:
     type: 0
     allowedItem: {fileID: 0}
     allowedItemType: 0
@@ -25,15 +26,15 @@ MonoBehaviour:
     type: 0
     allowedItem: {fileID: 0}
     allowedItemType: 0
-  ingredientCL:
+  ingredientML:
     type: 0
     allowedItem: {fileID: 0}
     allowedItemType: 0
-  ingredientCM:
+  ingredientMC:
     type: 2
     allowedItem: {fileID: 0}
     allowedItemType: 5
-  ingredientCR:
+  ingredientMR:
     type: 0
     allowedItem: {fileID: 0}
     allowedItemType: 0
@@ -41,7 +42,7 @@ MonoBehaviour:
     type: 0
     allowedItem: {fileID: 0}
     allowedItemType: 0
-  ingredientBM:
+  ingredientBC:
     type: 0
     allowedItem: {fileID: 0}
     allowedItemType: 0

@@ -15,5 +15,6 @@ MonoBehaviour:
   baseId: Purple Scake
   itemType: 5
   displayName: 
-  baseMonetaryValue: 15
+  baseMonetaryValue: 0
   ingredientValue: 15
+  Image: {fileID: 0}

@@ -39,25 +39,75 @@ public class CraftingRecipeIngredient
     }
 }
 
+
+[Serializable]
+public class CraftingConditionalResult
+{
+    public ItemDescription itemToCheck;
+    public int minAmountOfItemToCheck = 1;
+    public ItemDescription resultItem;
+}
+
 [Serializable, CreateAssetMenu]
 public class CraftingRecipe : ScriptableObject
 {
-    public ItemDescription resultItem;
+    [FormerlySerializedAs("resultItem")] public ItemDescription defaultResultItem;
 
-    [Header("Top Row")] public CraftingRecipeIngredient ingredientTL;
+    [Tooltip("When crafting, a special item can be crafted if it complied with any of the following conditions. The first one that matches will be used. If nothing matches, the default result will be used.")]
+    public List<CraftingConditionalResult> conditionalResults = new();
 
-    [FormerlySerializedAs("ingredientTM")] [CanBeNull]
+    [Header("Top Row")]
+    public CraftingRecipeIngredient ingredientTL;
     public CraftingRecipeIngredient ingredientTC;
-
     public CraftingRecipeIngredient ingredientTR;
 
-    [FormerlySerializedAs("ingredientCL")] [Header("Center Row")]
+    [Header("Center Row")]
     public CraftingRecipeIngredient ingredientML;
+    public CraftingRecipeIngredient ingredientMC;
+    public CraftingRecipeIngredient ingredientMR;
 
-    [FormerlySerializedAs("ingredientCM")] public CraftingRecipeIngredient ingredientMC;
-    [FormerlySerializedAs("ingredientCR")] public CraftingRecipeIngredient ingredientMR;
-
-    [Header("Bottom Row")] public CraftingRecipeIngredient ingredientBL;
-    [FormerlySerializedAs("ingredientBM")] public CraftingRecipeIngredient ingredientBC;
+    [Header("Bottom Row")]
+    public CraftingRecipeIngredient ingredientBL;
+    public CraftingRecipeIngredient ingredientBC;
     public CraftingRecipeIngredient ingredientBR;
+
+
+    /// <summary>
+    /// Returns the result item for the given list of ingredients. Calling this functions assumes that the ingredients
+    /// are enough to craft the result.
+    /// </summary>
+    /// <param name="ingredients"></param>
+    /// <returns></returns>
+    /// <exception cref="NotImplementedException"></exception>
+    public Item GetResultFor(List<Item> ingredients)
+    {
+        Dictionary<ItemDescription, int> counts = new();
+        foreach (Item item in ingredients)
+        {
+            if (!counts.TryAdd(item.Description, 1))
+            {
+                counts[item.Description]++;
+            }
+        }
+
+        foreach (CraftingConditionalResult conditionalResult in conditionalResults)
+        {
+            if (conditionalResult.itemToCheck == null)
+            {
+                continue;
+            }
+
+            ItemDescription item = conditionalResult.itemToCheck;
+
+            if (
+                counts.TryGetValue(item, out int amount) &&
+                amount >= conditionalResult.minAmountOfItemToCheck
+            )
+            {
+                return new Item(conditionalResult.resultItem, ingredients);
+            }
+        }
+
+        return new Item(defaultResultItem, ingredients);
+    }
 }
