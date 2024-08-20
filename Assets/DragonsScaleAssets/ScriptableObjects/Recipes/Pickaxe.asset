@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6439e3c31bf4022a282458933280899, type: 3}
-  m_Name: Axe
+  m_Name: Pickaxe
   m_EditorClassIdentifier: 
-  defaultResultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  defaultResultItem: {fileID: 11400000, guid: 7c9aa7030e773b048aa5a7ce6a299e18, type: 2}
   conditionalResults:
   - itemToCheck: {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
     minAmountOfItemToCheck: 1
-    resultItem: {fileID: 11400000, guid: eaafcd5a683c5db48a4b648706c23037, type: 2}
+    resultItem: {fileID: 11400000, guid: 0cbd65605a9ef054e931018d0c06512a, type: 2}
   - itemToCheck: {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
     minAmountOfItemToCheck: 1
-    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+    resultItem: {fileID: 11400000, guid: a22fc3b3fc6682f4299e63203a03c055, type: 2}
   ingredientTL:
     type: 2
     allowedItem: {fileID: 0}
@@ -29,13 +29,13 @@ MonoBehaviour:
     allowedItem: {fileID: 0}
     allowedItemType: 5
   ingredientTR:
-    type: 0
-    allowedItem: {fileID: 0}
-    allowedItemType: 5
-  ingredientML:
     type: 2
     allowedItem: {fileID: 0}
     allowedItemType: 5
+  ingredientML:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
   ingredientMC:
     type: 1
     allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}

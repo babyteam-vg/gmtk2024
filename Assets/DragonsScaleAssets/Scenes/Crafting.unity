@@ -293,8 +293,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa8d38f6f32a409db765bc9744a1359b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugItem: {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
-  debugItem2: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+  debugItems:
+  - {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
+  - {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+  - {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
+  - {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+  - {fileID: 11400000, guid: 56628c7e747e5b34c8890942a4fba9ad, type: 2}
   containerId: InventoryContent
   itemTemplate: {fileID: 9197481963319205126, guid: b6c5f85fcb7baf74f9e262adbd5795c5, type: 3}
   itemPreviewTemplate: {fileID: 9197481963319205126, guid: 0a11a07fa60ff1a458018168dbaef785, type: 3}

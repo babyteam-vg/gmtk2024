@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b224b13f6adc4fd7a06a7fea2e4f9b26, type: 3}
   m_Name: ScaleGreen
   m_EditorClassIdentifier: 
-  baseId: Green Scale
+  baseId: green-scale
   itemType: 5
   displayName: Green Scale
   baseMonetaryValue: 0

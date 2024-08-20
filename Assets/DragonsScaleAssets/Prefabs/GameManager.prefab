@@ -45,19 +45,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clientTextures:
-  - {fileID: 2800000, guid: 4e76fa6cc050db94d90a747494cf9d84, type: 3}
+  - {fileID: 0}
   clientNeeds:
   - itemType: 0
-    sprite: {fileID: 2800000, guid: 95d2348346df33245a44e33c44c14629, type: 3}
+    sprite: {fileID: 2800000, guid: 078b3e3cce5164a45aaa4610bdbdd3e7, type: 3}
   - itemType: 1
-    sprite: {fileID: 2800000, guid: 0286567e631562b489987376501e668a, type: 3}
+    sprite: {fileID: 2800000, guid: 0e89fba5b69cb2f42a00c8441dd01d3c, type: 3}
   - itemType: 2
-    sprite: {fileID: 2800000, guid: 2aba552625964a14d8ee475e6bbf3b6c, type: 3}
-  - itemType: 3
-    sprite: {fileID: 2800000, guid: ef6611681664808428463f8638307158, type: 3}
-  - itemType: 4
-    sprite: {fileID: 2800000, guid: e2cf7b26c6c187544ad98ec7640ea66e, type: 3}
-  maxClients: 5
+    sprite: {fileID: 2800000, guid: 4c081bf74496208409865eb16b5ab066, type: 3}
+  maxClients: 3
 --- !u!1 &284460916841672122
 GameObject:
   m_ObjectHideFlags: 0

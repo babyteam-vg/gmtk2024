@@ -1,5 +1,4 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="SellableItem" src="project://database/Assets/DragonsScaleAssets/UI/Components/SellableItem.uxml?fileID=9197481963319205126&amp;guid=e4f3573c3ebe7e348a5ef8e0a8c68b81&amp;type=3#SellableItem" />
     <Style src="project://database/Assets/DragonsScaleAssets/UI/global.uss?fileID=7433441132597879392&amp;guid=2c1f872f5b01dac4c81b7eef34f0159d&amp;type=3#global" />
     <Style src="project://database/Assets/DragonsScaleAssets/UI/crafting.uss?fileID=7433441132597879392&amp;guid=276a39004918379479020afe77661780&amp;type=3#crafting" />
     <Style src="project://database/Assets/DragonsScaleAssets/UI/Components/ItemElement.uss?fileID=7433441132597879392&amp;guid=40fbd8ffd3f6c6c48a35caa662772a9e&amp;type=3#ItemElement" />
@@ -10,7 +9,7 @@
         <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row; flex-wrap: nowrap; margin-top: 0; margin-bottom: 0; margin-right: 0; margin-left: 0;">
             <ui:VisualElement name="CraftingContainer" style="background-color: rgba(0, 0, 0, 0); flex-grow: 1; flex-direction: column; align-items: stretch; padding-left: 24px; padding-bottom: 24px; padding-top: 24px; padding-right: 24px;">
                 <ui:VisualElement name="CoinDisplay" style="flex-grow: 1; max-height: 125px; flex-direction: row; justify-content: center; max-width: 403px; margin-left: 0; align-items: stretch; align-self: auto; background-color: rgba(255, 255, 255, 0.68); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; -unity-text-align: upper-left; margin-top: 0; margin-right: 0; margin-bottom: 0;">
-                    <ui:Label tabindex="-1" text="0&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" style="font-size: 36px; -unity-text-align: middle-center; align-self: auto; justify-content: flex-start; align-items: auto; flex-grow: 1; flex-shrink: 1; flex-direction: column; text-overflow: clip;" />
+                    <ui:Label tabindex="-1" text="0&#10;" parse-escape-sequences="true" display-tooltip-when-elided="true" name="CoinDisplay" style="font-size: 36px; -unity-text-align: middle-center; align-self: auto; justify-content: flex-start; align-items: auto; flex-grow: 1; flex-shrink: 1; flex-direction: column; text-overflow: clip;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="RequestZone" style="flex-grow: 1; justify-content: center; align-items: center;">
                     <ui:VisualElement name="Clients" style="flex-grow: 1; position: absolute; left: 0; top: 0; right: 0; bottom: 0;">
@@ -26,10 +25,7 @@
                 <ui:VisualElement name="ShopBox" style="flex-grow: 1; margin-top: 88px; max-width: 570px; align-items: stretch; background-color: rgb(192, 192, 192); border-top-left-radius: 12px; border-top-right-radius: 12px; border-bottom-right-radius: 12px; border-bottom-left-radius: 12px; margin-bottom: 78px; padding-top: 21px; padding-right: 12px; padding-bottom: 21px; padding-left: 12px;">
                     <ui:VisualElement style="flex-grow: 0; flex-basis: 64px; background-image: resource(&apos;Images/Scales/512_EscamaMorada&apos;); -unity-background-scale-mode: scale-to-fit;" />
                     <ui:ScrollView name="ScrollView" style="flex-grow: 1; justify-content: flex-start; align-items: stretch; align-self: stretch; -unity-text-align: middle-left;">
-                        <ui:VisualElement name="InventoryList" class="grid" style="flex-grow: 1; align-items: flex-start; align-self: stretch; justify-content: space-between; flex-direction: row;">
-                            <ui:Instance template="SellableItem" name="SellableItem" />
-                            <ui:Instance template="SellableItem" name="SellableItem" />
-                        </ui:VisualElement>
+                        <ui:VisualElement name="InventoryList" class="grid" style="flex-grow: 1; align-items: flex-start; align-self: stretch; justify-content: space-between; flex-direction: row;" />
                     </ui:ScrollView>
                 </ui:VisualElement>
             </ui:VisualElement>

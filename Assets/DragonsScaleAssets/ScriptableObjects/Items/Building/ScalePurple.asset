@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b224b13f6adc4fd7a06a7fea2e4f9b26, type: 3}
   m_Name: ScalePurple
   m_EditorClassIdentifier: 
-  baseId: Purple Scake
+  baseId: purple-scale
   itemType: 5
   displayName: 
   baseMonetaryValue: 0

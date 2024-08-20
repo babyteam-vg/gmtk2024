@@ -11,8 +11,7 @@ using Random = UnityEngine.Random;
 [RequireComponent(typeof(DragController))]
 public class DragControllerInventoryLink : MonoBehaviour
 {
-    [SerializeField] private ItemDescription debugItem;
-    [SerializeField] private ItemDescription debugItem2;
+    [SerializeField] private List<ItemDescription> debugItems;
     [SerializeField] private string containerId = "Inventory";
     [SerializeField] private VisualTreeAsset itemTemplate;
     [SerializeField] private VisualTreeAsset itemPreviewTemplate;
@@ -46,9 +45,9 @@ public class DragControllerInventoryLink : MonoBehaviour
     private void Update()
     {
         // FIXME: just for debug
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && debugItems.Count > 0)
         {
-            ItemDescription itemToCreate = Random.value < 0.5f ? debugItem : debugItem2;
+            ItemDescription itemToCreate = debugItems[Random.Range(0, debugItems.Count)];
             GameManager.Instance.playerData.inventory.AddItem(new Item(itemToCreate));
         }
 

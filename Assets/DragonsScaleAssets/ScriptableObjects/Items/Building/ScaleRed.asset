@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b224b13f6adc4fd7a06a7fea2e4f9b26, type: 3}
   m_Name: ScaleRed
   m_EditorClassIdentifier: 
-  baseId: Red Scale
+  baseId: red-scale
   itemType: 5
   displayName: Red Scale
   baseMonetaryValue: 0

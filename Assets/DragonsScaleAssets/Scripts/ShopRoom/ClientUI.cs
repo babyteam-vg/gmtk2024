@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -7,7 +9,7 @@ public class ClientUI: MonoBehaviour
 {
     [SerializeField] public string clientSpriteId = "client-";
     [SerializeField] public string requestImageId = "RequestImage";
-    [SerializeField] public List<Client> clientSprites = new();
+    [SerializeField] private string coinDisplayId = "CoinDisplay";
 
     [SerializeField] public VisualTreeAsset sellableItemTemplate;
 
@@ -29,12 +31,15 @@ public class ClientUI: MonoBehaviour
         VisualElement inventoryList = _document.rootVisualElement.Q<VisualElement>("InventoryList");
         inventoryList.Clear();
 
+        List<ItemType> sellableItemTypes =
+            ClientManager.Instance.clientNeeds.Select(clientNeed => clientNeed.itemType).ToList();
+
         foreach (ItemCount itemCount in inventory.ListItemsCount())
         {
             Item item = itemCount.Item;
             if (item == null) continue;
-
-            if (itemCount.Item.MonetaryValue == 0) continue;
+            
+            if (!sellableItemTypes.Contains(item.Description.itemType)) continue;
 
             for (int i = 0; i < itemCount.Amount; i++)
             {

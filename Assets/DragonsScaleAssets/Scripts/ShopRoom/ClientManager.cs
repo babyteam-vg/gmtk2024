@@ -22,7 +22,7 @@ public class Client
 public class ClientManager : MonoBehaviour
 {
     [SerializeField] private List<Texture2D> clientTextures = new();
-    [SerializeField] private List<ClientNeed> clientNeeds = new();
+    [SerializeField] public List<ClientNeed> clientNeeds = new();
     [SerializeField] private int maxClients = 5;
 
     private List<Client> _incomingClients = new();
@@ -76,12 +76,14 @@ public class ClientManager : MonoBehaviour
     public bool SellItem(Item item)
     {
         if (CurrentClient.neededItemType.itemType != item.Description.itemType)
-        {
             return false;
-        }
+
+        if (!GameManager.Instance.playerData.inventory.SpendItem(item))
+            return false;
 
         _incomingClients.RemoveAt(0);
         _incomingClients.Add(GenerateRandomClient());
+        GameManager.Instance.playerData.AddCoins(item.MonetaryValue);
         clientsChanged?.Invoke();
 
         return true;

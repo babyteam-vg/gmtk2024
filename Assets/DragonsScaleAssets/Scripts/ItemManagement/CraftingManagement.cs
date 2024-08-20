@@ -168,7 +168,8 @@ public class CraftingManagement : MonoBehaviour
             return;
         }
 
-        previewImage.style.backgroundImage = recipe.defaultResultItem.Image;
+        Item result = recipe.GetResultFor(selection.ListItems());
+        previewImage.style.backgroundImage = result.Description.Image;
     }
 
     private void OnDestroy()
