@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [RequireComponent(typeof(UIDocument))]
-public class ClientUI: MonoBehaviour
+public class ClientUI : MonoBehaviour
 {
     [SerializeField] public string clientSpriteId = "client-";
     [SerializeField] public string requestImageId = "RequestImage";
@@ -23,6 +23,15 @@ public class ClientUI: MonoBehaviour
         ClientManager.Instance.clientsChanged += UpdateClientSprites;
 
         UpdateInventory();
+        UpdateCoins(GameManager.Instance.playerData.coins);
+        GameManager.Instance.playerData.CoinsChanged += UpdateCoins;
+    }
+
+    private void UpdateCoins(int newCoins)
+    {
+        Label coinsDisplay = _document.rootVisualElement.Q<Label>(coinDisplayId);
+        if (coinsDisplay == null) return;
+        coinsDisplay.text = $"{newCoins} G";
     }
 
     private void UpdateInventory()
@@ -38,7 +47,7 @@ public class ClientUI: MonoBehaviour
         {
             Item item = itemCount.Item;
             if (item == null) continue;
-            
+
             if (!sellableItemTypes.Contains(item.Description.itemType)) continue;
 
             for (int i = 0; i < itemCount.Amount; i++)
@@ -91,5 +100,6 @@ public class ClientUI: MonoBehaviour
     private void OnDestroy()
     {
         ClientManager.Instance.clientsChanged -= UpdateClientSprites;
+        GameManager.Instance.playerData.CoinsChanged -= UpdateCoins;
     }
 }

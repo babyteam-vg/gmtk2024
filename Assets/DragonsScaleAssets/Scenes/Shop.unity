@@ -390,7 +390,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clientSpriteId: client-
   requestImageId: RequestImage
-  clientSprites: []
+  coinDisplayId: CoinDisplayLabel
   sellableItemTemplate: {fileID: 9197481963319205126, guid: e4f3573c3ebe7e348a5ef8e0a8c68b81, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
