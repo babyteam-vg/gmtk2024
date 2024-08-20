@@ -17,4 +17,4 @@ MonoBehaviour:
   displayName: Black Pickaxe
   baseMonetaryValue: 0
   ingredientValue: 0
-  Image: {fileID: 2800000, guid: 078b3e3cce5164a45aaa4610bdbdd3e7, type: 3}
+  Image: {fileID: 2800000, guid: 22e52e4ea51b85a4fa6e7313977936a1, type: 3}

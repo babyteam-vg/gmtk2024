@@ -17,4 +17,4 @@ MonoBehaviour:
   displayName: Blue Shield
   baseMonetaryValue: 0
   ingredientValue: 0
-  Image: {fileID: 0}
+  Image: {fileID: 2800000, guid: a8ff13c8ae491f24c8aa9270a7249953, type: 3}

@@ -17,4 +17,4 @@ MonoBehaviour:
   displayName: Bronze Shield
   baseMonetaryValue: 0
   ingredientValue: 0
-  Image: {fileID: 0}
+  Image: {fileID: 2800000, guid: ad0b6d98b6c69d44e935a225f8bdc0d5, type: 3}
