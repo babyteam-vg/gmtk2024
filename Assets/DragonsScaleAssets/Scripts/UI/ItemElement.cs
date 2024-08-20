@@ -8,6 +8,7 @@ public class ItemElement : VisualElement
     }
 
     public Item Item { get; private set; }
+    public int Quantity { get; private set; }
 
     private VisualElement Image => this.Q<VisualElement>("image");
     private Label QuantityBadge => this.Q<Label>("quantity");
@@ -18,7 +19,6 @@ public class ItemElement : VisualElement
         int quantity
     )
     {
-
         if (item.Description.Image)
         {
             Image.style.backgroundImage = new StyleBackground(item.Description.Image);
@@ -28,12 +28,30 @@ public class ItemElement : VisualElement
         QuantityBadge.text = quantity.ToString();
 
         Item = item;
+        Quantity = quantity;
     }
 
-    public ItemElement() {}
+    public ItemElement()
+    {
+    }
 
     public void ChangeAmount(int amount)
     {
         QuantityBadge.text = amount.ToString();
+    }
+
+    public VisualElement CreatePreview()
+    {
+        VisualElement element = new();
+        element.Add(
+            new VisualElement
+            {
+                style =
+                {
+                    backgroundImage = Item.Description.Image
+                },
+                name = "image"
+            });
+        return element;
     }
 }

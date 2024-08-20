@@ -47,4 +47,9 @@ public class Item
 
         return GetHashCode() == obj.GetHashCode();
     }
+
+    public override string ToString()
+    {
+        return Description.baseId;
+    }
 }

@@ -15,6 +15,7 @@ public class DragControllerInventoryLink : MonoBehaviour
     [SerializeField] private ItemDescription debugItem2;
     [SerializeField] private string containerId = "Inventory";
     [SerializeField] private VisualTreeAsset itemTemplate;
+    [SerializeField] private VisualTreeAsset itemPreviewTemplate;
     [SerializeField] private string dragTargetTag = "craft";
 
     private DragController _dragController;
@@ -85,6 +86,7 @@ public class DragControllerInventoryLink : MonoBehaviour
         }
 
         TemplateContainer templateContainer = itemTemplate.Instantiate();
+        TemplateContainer previewTemplateContainer = itemPreviewTemplate.Instantiate();
 
         DraggableObject draggableObject = templateContainer.Q<DraggableObject>();
         draggableObject.SetCompatibleTargetTags(dragTargetTag);
@@ -99,9 +101,22 @@ public class DragControllerInventoryLink : MonoBehaviour
             throw new Exception("Could not find an ItemElement inside the draggable object in the given template");
         }
 
+        VisualElement previewElement = previewTemplateContainer;
+        if (previewElement == null)
+        {
+            throw new Exception("Could not find an Image inside the draggable object in the given template");
+        }
+
         itemElement.Init(count.Item, count.Amount);
 
-        draggableObject.SetPreview(itemElement);
+        VisualElement previewImage = previewElement.Q("image");
+        if (previewImage == null)
+        {
+            throw new Exception("Could not find an Image inside the draggable object in the given template");
+        }
+
+        previewImage.style.backgroundImage = count.Item.Description.Image;
+        draggableObject.Init(itemElement, previewImage);
         _dragController.RegisterElement(draggableObject);
 
         _itemElements[count.Item] = itemElement;

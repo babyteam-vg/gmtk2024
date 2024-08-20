@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public enum CraftingRecipeIngredientType
 {
@@ -15,10 +16,11 @@ public enum CraftingRecipeIngredientType
 public class CraftingRecipeIngredient
 {
     [SerializeField]
-    [Tooltip("Item means it will check if the item is allowed. ItemType means it will check if the item type is allowed.")]
+    [Tooltip(
+        "Item means it will check if the item is allowed. ItemType means it will check if the item type is allowed.")]
     public CraftingRecipeIngredientType type = CraftingRecipeIngredientType.Empty;
-    [Space]
-    public ItemDescription allowedItem;
+
+    [Space] public ItemDescription allowedItem;
     public ItemType allowedItemType;
 
     public bool IsCompatible(Item item)
@@ -38,22 +40,24 @@ public class CraftingRecipeIngredient
 }
 
 [Serializable, CreateAssetMenu]
-public class CraftingRecipe: ScriptableObject
+public class CraftingRecipe : ScriptableObject
 {
     public ItemDescription resultItem;
 
-    [Header("Top Row")]
-    [CanBeNull] public CraftingRecipeIngredient ingredientTL;
-    [CanBeNull] public CraftingRecipeIngredient ingredientTM;
-    [CanBeNull] public CraftingRecipeIngredient ingredientTR;
-    
-    [Header("Center Row")]
-    [CanBeNull] public CraftingRecipeIngredient ingredientCL;
-    [CanBeNull] public CraftingRecipeIngredient ingredientCM;
-    [CanBeNull] public CraftingRecipeIngredient ingredientCR;
-    
-    [Header("Bottom Row")]
-    [CanBeNull] public CraftingRecipeIngredient ingredientBL;
-    [CanBeNull] public CraftingRecipeIngredient ingredientBM;
-    [CanBeNull] public CraftingRecipeIngredient ingredientBR;
+    [Header("Top Row")] public CraftingRecipeIngredient ingredientTL;
+
+    [FormerlySerializedAs("ingredientTM")] [CanBeNull]
+    public CraftingRecipeIngredient ingredientTC;
+
+    public CraftingRecipeIngredient ingredientTR;
+
+    [FormerlySerializedAs("ingredientCL")] [Header("Center Row")]
+    public CraftingRecipeIngredient ingredientML;
+
+    [FormerlySerializedAs("ingredientCM")] public CraftingRecipeIngredient ingredientMC;
+    [FormerlySerializedAs("ingredientCR")] public CraftingRecipeIngredient ingredientMR;
+
+    [Header("Bottom Row")] public CraftingRecipeIngredient ingredientBL;
+    [FormerlySerializedAs("ingredientBM")] public CraftingRecipeIngredient ingredientBC;
+    public CraftingRecipeIngredient ingredientBR;
 }

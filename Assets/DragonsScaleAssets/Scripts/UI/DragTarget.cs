@@ -8,7 +8,7 @@ public class DragTarget: VisualElement
 {
     public string TargetTag = "item";
 
-    [CanBeNull] private DraggableObject _holdObject = null;
+    [CanBeNull] private DraggableObject _holdObject;
 
     public new class UxmlFactory : UxmlFactory<DragTarget, UxmlTraits>
     {
@@ -37,16 +37,14 @@ public class DragTarget: VisualElement
         RegisterCallback<MouseUpEvent>(OnMouseUp);
     }
 
-    public void SetDraggableView(DraggableObject draggableObject)
-    {
-        Add(draggableObject);
-    }
+    public Action<DragTarget> HeldObjectChange;
 
     private void OnMouseUp(MouseUpEvent evt)
     {
         if (_holdObject != null)
         {
             RemoveHold();
+            HeldObjectChange?.Invoke(this);
         }
         DropRequest?.Invoke(this);
     }
@@ -55,17 +53,14 @@ public class DragTarget: VisualElement
     {
         RemoveHold();
         _holdObject = draggableObject;
+        HeldObjectChange?.Invoke(this);
 
         VisualElement previewImageElement = GetPreviewImageElement();
         if (previewImageElement != null)
         {
-            StyleBackground? previewImage =  draggableObject.GetPreviewImage();
-            if (previewImage == null)
-            {
-                Debug.LogWarning("DraggableObject does not have a preview image");
-                return;
-            }
-            previewImageElement.style.backgroundImage = (StyleBackground)previewImage;
+            Debug.Log("Adding preview element");
+            StyleBackground backgroundImage = draggableObject.GetPreviewElement()?.style?.backgroundImage ?? null;
+            previewImageElement.style.backgroundImage = backgroundImage;
         }
         else
         {
@@ -92,7 +87,7 @@ public class DragTarget: VisualElement
         previewImage.style.backgroundImage = null;
     }
 
-    public DraggableObject GetHoldDraggable()
+    public DraggableObject GetHeldDraggable()
     {
         return _holdObject;
     }

@@ -39,7 +39,6 @@ public class DragController : MonoBehaviour
     /// <param name="target"></param>
     private void OnDropRequest(DragTarget target)
     {
-       
         if (CurrentDraggedObject == null)
         {
             return;
@@ -49,6 +48,7 @@ public class DragController : MonoBehaviour
         {
             return;
         }
+
         target.Hold(CurrentDraggedObject);
         StopDrag();
     }
@@ -115,20 +115,21 @@ public class DragController : MonoBehaviour
         CurrentDraggedObject = draggableObject;
 
         VisualElement preview = draggableObject.GetPreviewElement();
-        if (preview != null)
-        {
-            preview.pickingMode = PickingMode.Ignore;
-        }
+        if (preview == null) return;
+
+        preview.pickingMode = PickingMode.Ignore;
+        preview.style.display = DisplayStyle.Flex;
 
         _cursorElement.Add(preview);
     }
 
     public void StopDrag()
     {
-        VisualElement preview = CurrentDraggedObject?.ResetPreview();
+        VisualElement preview = CurrentDraggedObject?.GetPreviewElement();
         if (preview != null)
         {
             preview.pickingMode = PickingMode.Position;
+            preview.style.display = DisplayStyle.None;
         }
 
         CurrentDraggedObject = null;

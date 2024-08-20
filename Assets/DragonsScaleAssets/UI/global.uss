@@ -51,3 +51,8 @@
     -unity-text-align: upper-center;
     -unity-font-style: bold;
 }
+
+.crafting-slot > #image {
+    align-items: stretch;
+    justify-content: center;
+}

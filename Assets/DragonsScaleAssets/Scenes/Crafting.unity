@@ -296,6 +296,7 @@ MonoBehaviour:
   debugItem2: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
   containerId: InventoryContent
   itemTemplate: {fileID: 9197481963319205126, guid: b6c5f85fcb7baf74f9e262adbd5795c5, type: 3}
+  itemPreviewTemplate: {fileID: 9197481963319205126, guid: 0a11a07fa60ff1a458018168dbaef785, type: 3}
   dragTargetTag: item
 --- !u!114 &649912542
 MonoBehaviour:
@@ -320,6 +321,7 @@ MonoBehaviour:
   slotBL: CraftingBL
   slotBC: CraftingBC
   slotBR: CraftingBR
+  previewImageId: PreviewImage
   leftSceneButton: LeftBar
   rightSceneButton: RightBar
 --- !u!1 &2021784430
