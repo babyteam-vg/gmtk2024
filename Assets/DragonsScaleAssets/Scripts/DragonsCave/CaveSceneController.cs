@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 [Serializable]
@@ -20,6 +21,8 @@ public class CaveSceneController : MonoBehaviour
     [SerializeField] private Transform dragonPivot;
     private DragonController dragonObj;
     [SerializeField] private GameObject dragonSign;
+    public Image fillBar;
+    [SerializeField] private GameObject fillBarUIContainer;
 
     public static CaveSceneController Instance { get; private set; }
     private void Awake() 
@@ -71,7 +74,9 @@ public class CaveSceneController : MonoBehaviour
     public void DespawnDragon()
     {
         AudioManager.Instance.StopDragonSFX();
-        // MUERES
+        
+        // MUERES TO IMPLEMENT
+        
         Destroy(dragonObj.gameObject);
     }
 
@@ -95,6 +100,16 @@ public class CaveSceneController : MonoBehaviour
         spot.id =-1;
         spot.used =false;
         CaveManager.Instance.pickableInstances.Remove(instance);
+    }
+
+    public void ShowFillBar()
+    {
+        fillBarUIContainer.SetActive(true);
+    }
+
+    public void HideFillBar()
+    {
+        fillBarUIContainer.SetActive(false);
     }
 
     

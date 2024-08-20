@@ -14,10 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultResultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
   conditionalResults:
+  - itemToCheck: {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
   - itemToCheck: {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
     minAmountOfItemToCheck: 1
     resultItem: {fileID: 11400000, guid: eaafcd5a683c5db48a4b648706c23037, type: 2}
-  - itemToCheck: {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 046df90ec988b3f45b026d5c7d6d9e47, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 6c4fd8e71319a704c82408d5a24851aa, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 3f833a59be6f00247befc9b41cc291ff, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 5619b5bf37bcb2e40a14ac10d7c053ca, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 59e68a6aa52eec54a8d210fb428140a7, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 8a4e1c0e646c8ad4696c420f3f2430c2, type: 2}
     minAmountOfItemToCheck: 1
     resultItem: {fileID: 11400000, guid: 3fac82804ea6d10429c772aa106f3430, type: 2}
   ingredientTL:

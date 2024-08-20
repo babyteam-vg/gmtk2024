@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseId: purple-scale
   itemType: 5
-  displayName: 
+  displayName: Purple Scale
   baseMonetaryValue: 0
   ingredientValue: 15
-  Image: {fileID: 0}
+  Image: {fileID: 2800000, guid: 2aba552625964a14d8ee475e6bbf3b6c, type: 3}

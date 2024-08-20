@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6439e3c31bf4022a282458933280899, type: 3}
+  m_Name: Shiled
+  m_EditorClassIdentifier: 
+  defaultResultItem: {fileID: 11400000, guid: 0109ec9088aedf640b1be3e992f4cae5, type: 2}
+  conditionalResults:
+  - itemToCheck: {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 28a133368f0b86949943021331826f01, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 0dc4a095d1e75b743bd1c7563a655d8c, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 046df90ec988b3f45b026d5c7d6d9e47, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 64e65cacf5d7c9b4abc03d2525e592d4, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 6c4fd8e71319a704c82408d5a24851aa, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 24e7a674aaadcec4b9a75668fd3cf6b3, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 2cee56646e8a5ba46b7572e0abc9c64c, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 3f833a59be6f00247befc9b41cc291ff, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: b5b3b1eafc4a6fb4d94116547be92d7d, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 5619b5bf37bcb2e40a14ac10d7c053ca, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: b43757dc1e1eec44b8dadf928e84edc0, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 59e68a6aa52eec54a8d210fb428140a7, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: d7a0f5dcb5574394d9761b9f8e1a7e2b, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 8a4e1c0e646c8ad4696c420f3f2430c2, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: fa8d199cec8a12149acb0fef9a62a110, type: 2}
+  ingredientTL:
+    type: 2
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientTC:
+    type: 1
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 7
+  ingredientTR:
+    type: 2
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientML:
+    type: 2
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientMC:
+    type: 2
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 5
+  ingredientMR:
+    type: 2
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientBL:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientBC:
+    type: 2
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 5
+  ingredientBR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5

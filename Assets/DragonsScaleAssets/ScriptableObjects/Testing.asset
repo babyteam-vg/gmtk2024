@@ -15,4 +15,5 @@ MonoBehaviour:
   type: 0
   sleepTotalTime: 100
   prefab: {fileID: 8770933474295302788, guid: 461e157493a14124aa348a9386825048, type: 3}
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+  scaleTime: 5

@@ -31,6 +31,17 @@ public class DragonController : MonoBehaviour
 
     public void Update()
     {
-        zSign.transform.localScale = new Vector3(1,1,0) * (CaveManager.Instance.dragon.currentTime/CaveManager.Instance.dragon.data.sleepTotalTime)+ Vector3.forward;
+        zSign.transform.localScale =
+            new Vector3(1, 1, 0) *
+            (CaveManager.Instance.dragon.currentTime / CaveManager.Instance.dragon.data.sleepTotalTime) +
+            Vector3.forward;
+
+    }
+
+    public void GetScale()
+    {
+        GameManager.Instance.playerData.inventory.AddItem(new Item(instanceData.data.item),1);
+        CaveManager.Instance.dragon.currentTime -= 5;
+        
     }
 }

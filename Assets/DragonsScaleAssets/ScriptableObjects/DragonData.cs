@@ -24,4 +24,5 @@ public class DragonData : ScriptableObject
     public float sleepTotalTime;
     public DragonController prefab;
     public ItemDescription item;
+    public float scaleTime;
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ShovelStone
   m_EditorClassIdentifier: 
   baseId: pickaxe-stone
-  itemType: 0
+  itemType: 1
   displayName: Stone Shovel
   baseMonetaryValue: 0
   ingredientValue: 0

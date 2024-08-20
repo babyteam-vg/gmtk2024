@@ -22,6 +22,9 @@ public class PlayerMovementController : MonoBehaviour
 
 
     private PicakbleObject objectToPick;
+    private DragonController dragonToPick;
+    private Coroutine scalePicking;
+    private bool isPickingScale;
 
 
     private void Update()
@@ -68,6 +71,14 @@ public class PlayerMovementController : MonoBehaviour
         if (Input.GetButtonDown("Fire1"))
         {
             if(objectToPick!= null) objectToPick.PickObject();
+            if (dragonToPick != null && !isPickingScale)
+            {
+            
+          float time = dragonToPick.instanceData.data.scaleTime;
+                isPickingScale = true;
+                CaveSceneController.Instance.ShowFillBar();
+                scalePicking = StartCoroutine(PickingScale(time));
+            }
         }
     }
     
@@ -77,6 +88,11 @@ public class PlayerMovementController : MonoBehaviour
         {
             objectToPick = pickable;
         }
+        if (other.transform.TryGetComponent(out DragonController dragon))
+        {
+            dragonToPick = dragon;
+        }
+
 
         if (other.transform.tag == "Finish")
         {
@@ -91,6 +107,34 @@ public class PlayerMovementController : MonoBehaviour
         {
             objectToPick = null;
         }
+        if (other.transform.TryGetComponent(out DragonController dragon))
+        {
+            StopCoroutine(scalePicking);
+            CaveSceneController.Instance.HideFillBar();
+            isPickingScale = false;
+            dragonToPick = null;
+        }
     }
     
+    private IEnumerator PickingScale(float pickTime,Action onComplete=null)                 
+    {                                                                                                                                 
+        float elapsedTime = 0f;                                                                                                       
+        while (elapsedTime < pickTime)                                                                                                    
+        {                                                                                                                             
+            elapsedTime += Time.deltaTime;                                                                                            
+            float progress = elapsedTime / pickTime;                                                                                      
+            CaveSceneController.Instance.fillBar.fillAmount = Mathf.Lerp(0f, 1f, progress);                                                                        
+            yield return null;                                                                                                        
+        }
+        CaveSceneController.Instance.HideFillBar();
+        dragonToPick?.GetScale();
+        isPickingScale = false;
+        if (onComplete != null)                                                                                                       
+        {                                                                                                                             
+            onComplete();                                                                                                       
+        }                                                                                                                             
+    }
+    
+    
+
 }

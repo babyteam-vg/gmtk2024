@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6439e3c31bf4022a282458933280899, type: 3}
+  m_Name: Sword
+  m_EditorClassIdentifier: 
+  defaultResultItem: {fileID: 11400000, guid: d15bda787d188294b8548a601e8164e5, type: 2}
+  conditionalResults:
+  - itemToCheck: {fileID: 11400000, guid: bc418fe6789dab744a68d283ebc5643b, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: b4037e71996afd843bbc68186f0c05fb, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: c9c16bdf5afc6f54fb0d574a536a2400, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: ed1f8397a4cedb74f82398ceff0c092e, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 046df90ec988b3f45b026d5c7d6d9e47, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: c7eae5cdf74f2ed4fa928d8cbfa1b999, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 6c4fd8e71319a704c82408d5a24851aa, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 91fc1a86905900f4d8670af39c0464e3, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 949ee667793f9d24fb2f26b2e57a4b9c, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: b7211427611e2094ab229ad284cbba63, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 3f833a59be6f00247befc9b41cc291ff, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 9f3e146de293da84596ba78c684843f2, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 5619b5bf37bcb2e40a14ac10d7c053ca, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: 1dd1a231f0ce4a849a1eb225e279e95c, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 59e68a6aa52eec54a8d210fb428140a7, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: e2ec1473b558d5241ae0c275f9fe7a35, type: 2}
+  - itemToCheck: {fileID: 11400000, guid: 8a4e1c0e646c8ad4696c420f3f2430c2, type: 2}
+    minAmountOfItemToCheck: 1
+    resultItem: {fileID: 11400000, guid: cf75e435dbedbdd4694e211b8353b795, type: 2}
+  ingredientTL:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientTC:
+    type: 2
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientTR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
+  ingredientML:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientMC:
+    type: 2
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 5
+  ingredientMR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientBL:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 0
+  ingredientBC:
+    type: 1
+    allowedItem: {fileID: 11400000, guid: 0c20be15d2475ce4c807b508ea94d6eb, type: 2}
+    allowedItemType: 7
+  ingredientBR:
+    type: 0
+    allowedItem: {fileID: 0}
+    allowedItemType: 5
